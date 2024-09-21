@@ -1,12 +1,14 @@
+"use client";
+
 import CardBlog from "@/components/card-blog";
 import CardProject from "@/components/card-project";
 import { title } from "@/components/primitives";
-
 import Banner from "@/components/banner";
 import Description from "@/components/desc";
 import Footer from "@/components/footer";
 import Marquee from "@/components/magicui/marquee";
-
+import { ZakatMarquee } from "@/components/zakat";
+import { ListMarquee } from "@/components/donasi";
 
 export default function Donasi() {
   return (
@@ -17,11 +19,11 @@ export default function Donasi() {
         }
         heading={<>Donasi</>}
       />
-      <div className="container mx-auto my-auto px-4 max-w-7xl mt-10">
+      <div className="container mx-auto my-auto  max-w-7xl mt-10">
         <Description
           description={
-            <div className="text-lg">
-              <p >
+            <div className="text-lg text-gray-500">
+              <p>
                 Yayasan Baituzzakah Pertamina (Bazma) adalah Lembaga Nirlaba
                 yang berkhidmat mengangkat harkat sosial kemanusiaan dengan
                 mendayagunakan dana zakat, infak/sedekah dan wakaf (Ziswaf) yang
@@ -30,23 +32,42 @@ export default function Donasi() {
                 dhuafa, penanganan bencana dan pemberdayaan ekonomi masyarakat
                 di seluruh Indonesia.
               </p>
-                <br />
-              <p >
+              <br />
+              <p>
                 Salah satu program yang sedang digulirkan adalah wakaf
                 Pembangunan SMK TI Bazma, sebuah model pengelolaan pendidikan
                 yang diharapkan bisa mencetak kader-kader berkarakter unggul dan
                 berdaya saing bersaing di era global.
               </p>
               <br />
-              <p >
-                Salurkan Wakaf terbaik anda melalui Bank Syariah Indonesia
-                (BSI) :
-                <br />
+              <p>
+                Salurkan Wakaf terbaik anda melalui 
+                <span className="font-bold">Bank Syariah Indonesia (BSI) :</span>
               </p>
+              <h1 className="text-4xl text-teal-500 font-extrabold py-3 ">
+                711.88.444.88
+              </h1>
+              <p>A.N Yayasan Baituzzakah Pertamina</p>
             </div>
           }
         />
       </div>
+
+      <div className="container mx-auto mb-12 px-4 max-w-7xl  ">
+        <div className="mb-4">
+          <h1 className="text-4xl font-extrabold text-[#0057B8] mb-6">
+            Donasi
+          </h1>
+          <ListMarquee />
+        </div>
+        <div>
+          <h1 className="text-4xl font-extrabold text-[#0057B8] mb-6">
+            Infak/Shadaqah
+          </h1>
+          <ZakatMarquee />
+        </div>
+      </div>
+
       <Footer />
     </section>
   );

@@ -61,7 +61,7 @@ export default function Home() {
 
 
 
-      <section className="w-full text-white py-[75px]" style={{ backgroundColor: '#0057B8' }}>
+      <section className="w-full text-white py-[75px] my-[75px]" style={{ backgroundColor: '#0057B8' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           <BlurFade delay={0.25 * 2} inView>
             <div className="flex flex-col-reverse md:flex-row justify-between">

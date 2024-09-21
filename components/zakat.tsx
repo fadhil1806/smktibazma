@@ -12,25 +12,25 @@ const MANDIRI_LOGO_URL = "https://vectorez.biz.id/wp-content/uploads/2023/10/Log
 const list = [
   {
     logo: BSI_LOGO_URL,
-    title: "711.88.444.29",
+    title: "711.88.444.61",
     subtitle: "LAZNAS BAITUZZAKAH",
     text: "ex (BSM)",
   },
   {
     logo: BSI_LOGO_URL,
-    title: "227.497.6630",
+    title: "227.498.3060",
     subtitle: "BAITUZZAKAH PERTAMINA",
     text: "ex (BNIS)",
   },
   {
     logo: BSI_LOGO_URL,
-    title: "103.91.733.16",
+    title: "103.91.732.94",
     subtitle: "BAITUZZAKAH PERTAMINA",
     text: "ex (BRIS)",
   },
   {
     logo: MANDIRI_LOGO_URL,
-    title: "711.88.444.29",
+    title: "119.000.301.1028",
     subtitle: "LAZNAS BAITUZZAKAH P.",
   },
 ];
@@ -38,7 +38,7 @@ const list = [
 const firstRow = list.slice(0, Math.ceil(list.length));
 
 
-const ListCard = ({ logo, title, subtitle, text }: { logo: string; title: string; subtitle: string; text: string }) => (
+const ZakatCard = ({ logo, title, subtitle, text }: { logo: string; title: string; subtitle: string; text: string }) => (
   <Card
     className={clsx(
       "relative w-80 cursor-pointer overflow-hidden rounded-xl border ",
@@ -59,13 +59,13 @@ const ListCard = ({ logo, title, subtitle, text }: { logo: string; title: string
   </Card>
 );
 
-export function ListMarquee() {
+export function ZakatMarquee() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
       <BlurFade delay={0.25} inView>
-        <Marquee pauseOnHover className="[--duration:20s] ">
+        <Marquee reverse pauseOnHover className="[--duration:20s] ">
           {firstRow.map(({ logo, title, subtitle, text }, index) => (
-            <ListCard key={index} logo={logo} title={title} subtitle={subtitle} text={text} />
+            <ZakatCard key={index} logo={logo} title={title} subtitle={subtitle} text={text} />
           ))}
         </Marquee>
 
