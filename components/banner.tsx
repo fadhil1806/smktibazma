@@ -9,7 +9,7 @@ export default function Banner({ imgSrc, heading }) {
         />
       </div>
 
-      <div className='absolute inset-y-0 left-0 w-full bg-gradient-to-r from-blue-800 to-transparent'></div>
+      <div className='absolute inset-y-0 left-0 w-full bg-gradient-to-tr from-blue-800 to-transparent'></div>
 
       <div className='relative z-10 w-full flex items-end h-full'>
         <div className='text-white w-full inline-flex mx-auto my-auto px-4 max-w-7xl items-center mb-10'>
