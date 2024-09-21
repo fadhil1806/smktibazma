@@ -19,7 +19,7 @@ import Carousel from "@/components/carousel";
 
 export default function Home() {
   const slidesData = [
-    { imgSrc: "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg", heading: "Energi Masa Depan" },
+    { imgSrc: "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg", heading: "Energi Masa Depan Indonesia" },
     { imgSrc: "https://swiperjs.com/demos/images/nature-2.jpg", heading: "Keindahan Alam" },
     { imgSrc: "https://swiperjs.com/demos/images/nature-3.jpg", heading: "Petualangan" },
     { imgSrc: "https://swiperjs.com/demos/images/nature-4.jpg", heading: "Keajaiban Dunia" }
