@@ -31,7 +31,7 @@ const list = [
   {
     logo: MANDIRI_LOGO_URL,
     title: "119.000.301.1028",
-    subtitle: "LAZNAS BAITUZZAKAH P.",
+    subtitle: "LAZNAS BAITUZZAKAH",
   },
 ];
 

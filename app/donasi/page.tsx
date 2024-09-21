@@ -19,7 +19,7 @@ export default function Donasi() {
         }
         heading={<>Donasi</>}
       />
-      <div className="container mx-auto my-auto  max-w-7xl mt-10">
+      <div className="container mx-auto my-auto max-w-7xl mt-10">
         <Description
           description={
             <div className="text-lg text-gray-500">
