@@ -19,10 +19,10 @@ export default function Donasi() {
         }
         heading={<>Donasi</>}
       />
-      <div className="container mx-auto my-auto max-w-7xl mt-10">
+      <div className="container mx-auto my-auto max-w-6xl mt-10">
         <Description
           description={
-            <div className="text-lg text-gray-500">
+            <div className="text-lg text-gray-500 text-justify">
               <p>
                 Yayasan Baituzzakah Pertamina (Bazma) adalah Lembaga Nirlaba
                 yang berkhidmat mengangkat harkat sosial kemanusiaan dengan
@@ -44,7 +44,7 @@ export default function Donasi() {
                 Salurkan Wakaf terbaik anda melalui 
                 <span className="font-bold">Bank Syariah Indonesia (BSI) :</span>
               </p>
-              <h1 className="text-4xl text-teal-500 font-extrabold py-3 ">
+              <h1 className="text-4xl text-blue-700 font-extrabold py-3 ">
                 711.88.444.88
               </h1>
               <p>A.N Yayasan Baituzzakah Pertamina</p>
@@ -53,7 +53,7 @@ export default function Donasi() {
         />
       </div>
 
-      <div className="container mx-auto mb-12 px-4 max-w-7xl  ">
+      <div className="container mx-auto mb-12 px-4 max-w-6xl  ">
         <div className="mb-4">
           <h1 className="text-4xl font-extrabold text-[#0057B8] mb-6">
             Donasi
