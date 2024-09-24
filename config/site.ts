@@ -14,11 +14,11 @@ export const siteConfig = {
     },
     {
       label: "Donasi",
-      href: "/donasi",
+      href: "/donation",
     },
     {
       label: "Progres Siswa",
-      href: "/donasi",
+      href: "/progress-siswa",
     },
   ],
   navMenuItems: [

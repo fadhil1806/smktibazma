@@ -135,7 +135,7 @@ export default function Home() {
         <CardProject />
       </div>
 
-      <div className="mt-8 mb-8 container mx-auto my-auto px-4 max-w-7xl p-10 rounded-3xl inline-block text-center justify-center" style={{ backgroundColor: "#0057B8" }}>
+      <div className="mt-8 mb-8 container mx-auto my-auto px-4 max-w-7xl p-10 rounded-3xl inline-block text-center justify-center sm:ml-2 sm:mr-5" style={{ backgroundColor: "#0057B8" }}>
         <div className="inline-block max-w-3xl text-center justify-center mt-11 mb-11">
           <BlurFade delay={0.25} inView>
             <h1 className={title({ color: "cyan", class: 'font-cold' })}>Ayo Daftar Sekarang Juga!&nbsp;</h1>
