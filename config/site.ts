@@ -6,7 +6,7 @@ export const siteConfig = {
   navItems: [
     {
       label: "Tentang Kami",
-      href: "/docs",
+      href: "/about",
     },
     {
       label: "Portofolio",

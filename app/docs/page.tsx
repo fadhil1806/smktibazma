@@ -5,7 +5,6 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Tabs, Tab } from "@nextui-org/react";
 import { IconBuilding, IconSchool } from "@tabler/icons-react";
 
-
 import { title } from "@/components/primitives";
 import Footer from "@/components/footer";
 import CardProject from "@/components/card-project";
@@ -49,7 +48,7 @@ export default function DocsPage() {
             }
           />
 
-          <App/>
+          <App />
 
           <div className="flex flex-col bg-blue-800 p-6 gap-4 rounded-xl w-full">
             <div className="flex flex-col gap-2">
@@ -90,34 +89,43 @@ export default function DocsPage() {
             </div>
           </div>
           <div className="flex justify-between align-bottom py-8">
-            <h1 className="text-4xl font-bold text-blue-800">
-              Fasilitas & Program
-            </h1>
             <div className=" ">
               <Tabs
-                key="sekolah"
+                key="mainTabs"
                 variant="underlined"
                 color="primary"
-                aria-label="Tabs variants"
+                aria-label="Tabs with group"
               >
-                <Tab
-                  key="sekolah"
-                  title={
-                    <div className="flex items-center space-x-2">
-                      <IconBuilding />
-                      <span className="text-sm font-medium">Asrama</span>
-                    </div>
-                  }
-                ><CardProject/></Tab>
-                <Tab
-                  key="asrama"
-                  title={
-                    <div className="flex items-center space-x-2">
-                      <IconSchool />
-                      <span className="text-sm font-medium">Sekolah</span>
-                    </div>
-                  }
-                ></Tab>
+                {/* Tab Profil Sekolah terpisah */}
+                <Tab key="title" title={<h1>Profil Sekolah</h1>}>
+                  {/* Konten untuk Profil Sekolah */}
+                </Tab>
+
+                {/* Mulai pengelompokan Tab Sekolah dan Asrama */}
+                {/* <div className="grouped-tabs">
+                  <Tab
+                    key="sekolah"
+                    title={
+                      <div className="flex items-center space-x-2">
+                        <IconBuilding />
+                        <span className="text-sm font-medium">Asrama</span>
+                      </div>
+                    }
+                  >
+                    <CardProject />
+                  </Tab>
+                  TabPanel
+                  <Tab
+                    key="asrama"
+                    title={
+                      <div className="flex items-center space-x-2">
+                        <IconSchool />
+                        <span className="text-sm font-medium">Sekolah</span>
+                      </div>
+                    }
+                  >
+                  </Tab>
+                </div> */}
               </Tabs>
             </div>
           </div>
