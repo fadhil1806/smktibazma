@@ -48,7 +48,6 @@ export default function DocsPage() {
             }
           />
 
-          <App />
 
           <div className="flex flex-col bg-blue-800 p-6 gap-4 rounded-xl w-full">
             <div className="flex flex-col gap-2">

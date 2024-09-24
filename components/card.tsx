@@ -57,7 +57,7 @@ export default function CardProject() {
   ];
 
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-8 pt-10 sm:mt-8 sm:pt-8 lg:mx-0 lg:max-w-none sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-8 pt-10 sm:mt-1 sm:pt-8 lg:mx-0 lg:max-w-none sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {list.map((item, index) => (
         <BlurFade delay={0.25 * 4} inView key={index}>
           <Card
