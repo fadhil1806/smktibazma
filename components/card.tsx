@@ -25,7 +25,7 @@ export default function CardProject() {
   const list = [
     {
       img:
-        "https://firebasestorage.googleapis.com/v0/b/portofolio-database-fadhil.appspot.com/o/SISMAKO-DATABASE.png?alt=media&token=617aa869-7987-48b2-8677-3815d4128c14",
+        "/img/proyek.png",
       title: "Big Data Sismako - Database",
       desc:
         "is a web platform designed to manage, analyze, and visualize large-scale data for school applications.",
@@ -76,7 +76,7 @@ export default function CardProject() {
               removeWrapper
               alt="Relaxing app background"
               className="z-0 w-full h-full object-cover"
-              src="https://nextui.org/images/card-example-5.jpeg"
+              src="/img/proyek1.png"
             />
             <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
               <div className="flex flex-grow gap-2 items-center">
