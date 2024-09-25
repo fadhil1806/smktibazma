@@ -30,7 +30,7 @@ const skills = [
     },
 ];
 
-const firstRow = skills.slice(0, Math.ceil(skills.length / 2));
+const firstRow = skills.slice(0, Math.ceil(skills.length));
 
 const SkillCard = ({ img, link }: { img: string; link: string }) => {
     return (

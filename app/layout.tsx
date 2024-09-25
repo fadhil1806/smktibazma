@@ -10,7 +10,7 @@ import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Fadhil Porto',
+    default: 'SMK TI BAZMA',
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,

@@ -9,13 +9,13 @@ import {
 } from "@nextui-org/react";
 import { IconCircleFilled } from "@tabler/icons-react";
 
-export default function App() {
+export default function TabsLogo() {
   return (
-    <div className="flex flex-col px-4">
+    <div className="flex flex-col lg:px-8">
       <div className="flex w-full flex-col">
-        <Tabs aria-label="Options"  placement="end">
+        <Tabs aria-label="Options" placement="end" color="primary">
           <Tab key="biru" title="Biru" >
-            <Card className="max-w-2xl p-6">
+            <Card className="max-w-2xl p-3">
               <CardBody className="flex flex-col">
                 <div className="flex flex-row items-center space-x-4">
                   <span className="w-1/3">
@@ -49,7 +49,7 @@ export default function App() {
           </Tab>
 
           <Tab key="hijau" title="Hijau">
-            <Card className="max-w-2xl p-6">
+            <Card className="max-w-2xl p-3">
               <CardBody className="flex flex-col">
                 <div className="flex flex-row items-center space-x-4">
                   <span className="w-1/3">
@@ -81,7 +81,7 @@ export default function App() {
           </Tab>
 
           <Tab key="merah" title="Merah">
-            <Card className="max-w-2xl p-6">
+            <Card className="max-w-2xl p-3">
               <CardBody className="flex flex-col">
                 <div className="flex flex-row items-center space-x-4">
                   <span className="w-1/3">
@@ -102,7 +102,7 @@ export default function App() {
                 <div className="flex items-start space-x-4">
                   <IconCircleFilled className="w-1/4 h-auto" color="#C8222F" />
                   <p className="text-sm text-justify">
-                  Warna Merah mencerminkan keberanian, pantang menyerah serta mampu memancarkan energi positif bagi sekitar. Warna ini mencitrakan SMK TI BAZMA sebagai refleksi semangat Para Perwira dalam mengharumkan citra Bangsa Indonesia ke manca negara.
+                    Warna Merah mencerminkan keberanian, pantang menyerah serta mampu memancarkan energi positif bagi sekitar. Warna ini mencitrakan SMK TI BAZMA sebagai refleksi semangat Para Perwira dalam mengharumkan citra Bangsa Indonesia ke manca negara.
                   </p>
                 </div>
               </CardBody>

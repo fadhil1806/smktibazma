@@ -14,6 +14,8 @@ import FacilityTabs from "@/components/facility";
 import Carousel from "@/components/carousel";
 import CarouselAsrama from "@/components/carousel-program-asrama";
 import Widget2 from "@/components/widget";
+import TabsLogo from "@/components/tabs-logo";
+import KompotensiKeahlian from "@/components/accordion-kompentensi-keahlian";
 
 export default function DocsPage() {
   const slidesData = [
@@ -47,7 +49,6 @@ export default function DocsPage() {
         />
 
         <div className="container mx-auto my-auto px-4 max-w-6xl py-10 ">
-
           <>
             <BlurFade delay={0.25} inView>
               <Description
@@ -75,7 +76,6 @@ export default function DocsPage() {
               />
             </BlurFade>
           </>
-
 
           <div className="flex flex-col bg-blue-800 p-6 gap-4 rounded-xl w-full">
             <div className="flex flex-col gap-2">
@@ -123,9 +123,19 @@ export default function DocsPage() {
           <App />
 
         </div>
-        <CarouselAsrama slides={slidesData} />
+        {/* <CarouselAsrama slides={slidesData} /> */}
+        <div className="lg:px-10 max-w-7xl">
+          <h1 className="px-10 text-4xl font-bold text-blue-800 mr-5" >Makna logo</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
+            <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" className=" h-auto" alt="logo" />
+            <TabsLogo />
+          </div>
+        </div>
 
-        <Widget2 />
+        <div className="container mx-auto my-auto px-4 max-w-6xl py-10">
+          <KompotensiKeahlian />
+
+        </div>
         <Footer />
       </section>
     </div>

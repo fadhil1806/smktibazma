@@ -17,9 +17,9 @@ export default function Donasi() {
       />
       <div className="container mx-auto my-auto px-4 max-w-7xl mt-10">
         <h1 className="text-4xl font-bold text-blue-800">Daftar Mitra</h1>
-        <Description
+        <Description 
           description={
-            <>
+            <div className="py-6 text-justify">
               <p className="text-lg text-gray-500">
                 SMK TI Bazma adalah wujud cita-cita bersama dalam rangka
                 memberikan ruang bagi peserta didik untuk dapat berkarya dan
@@ -27,13 +27,14 @@ export default function Donasi() {
                 emosional, dan spiritual yang baik, siswa-siswa ini diharapkan
                 dapat menjadi generasi unggul dan berdaya saing global.
               </p>
-
+              <br/>
               <p className="text-lg text-gray-500">
                 Oleh karena itu, SMK TI Bazma menjalin kerja sama dengan
                 berbagai mitra Dunia Usaha dan Dunia Industri (DU/DI) sebagai
                 upaya menyelaraskan kebutuhan industri dengan persiapan SDM yang
                 kompeten. Bentuk kerja sama tersebut, antara lain:
               </p>
+              <br/>
 
               <ol className="list-decimal ml-6 text-lg text-gray-500">
                 <li>
@@ -47,7 +48,7 @@ export default function Donasi() {
                   bersaing di dunia industri.
                 </li>
               </ol>
-            </>
+            </div>
           }
         />
       </div>

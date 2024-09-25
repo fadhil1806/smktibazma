@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -22,10 +23,20 @@ import {
   DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
-  Logo
+  Logo,
+  ChevronDown
 } from "@/components/icons";
 import { Button } from "@nextui-org/button";
-
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { IconSchool, IconUsers, IconHeadset, IconClipboardData, IconId } from "@tabler/icons-react";
+const icons = {
+  chevron: <ChevronDown fill="currentColor" size={16} />,
+  profile: <IconSchool className="text-primary" stroke={2} size={30} />,
+  partners: <IconUsers className="text-primary" stroke={2} size={30} />,
+  service: <IconHeadset className="text-primary" stroke={2} size={30} />,
+  sismako: <IconClipboardData className="text-primary" stroke={2} size={30} />,
+  saas: <IconId className="text-primary" stroke={2} size={30} />,
+}
 export const Navbar = () => {
   const searchInput = (
     <Input
@@ -64,6 +75,100 @@ export const Navbar = () => {
         justify="end"
       >
         <ul className="hidden lg:flex gap-5 items-center ml-2">
+          <Dropdown>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-md"
+                  endContent={icons.chevron}
+                  radius="sm"
+                  variant="light"
+                >
+                  <h1 className="font-semibold">
+
+                  Tentang Kami
+                  </h1>
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+
+                description="Informasi tentang SMK TI BAZMA"
+                href="/about"
+                startContent={icons.profile}
+              >
+                Profil Sekolah
+              </DropdownItem>
+              <DropdownItem
+                key="usage_metrics"
+                href="/partner"
+                description="Informasi tentang Mitra SMK TI BAZMA"
+
+                startContent={icons.partners}
+              >
+                Mitra Kami
+              </DropdownItem>
+              <DropdownItem
+                key="production_ready"
+                description="Layanan, Masukan & Saran"
+
+                startContent={icons.service}
+              >
+                Layanan & Masukan
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Dropdown>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-md"
+                  endContent={icons.chevron}
+                  radius="sm"
+                  variant="light"
+                >
+                  <h1 className="font-semibold">
+
+                    Portofolio
+                  </h1>
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+
+                description="Sistem Manajemen Sekolah"
+                href="https://sismako.smktibazma.sch.id/"
+                startContent={icons.sismako}
+              >
+                SISMAKO
+              </DropdownItem>
+              <DropdownItem
+                key="usage_metrics"
+                href="/partner"
+                description="Sistem Absensi Sekolah"
+
+                startContent={icons.saas}
+              >
+                SAAS
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -78,9 +183,9 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
-                    <NavbarItem className="hidden lg:flex">
+          {/* <NavbarItem className="hidden lg:flex">
             <ThemeSwitch />
-          </NavbarItem> 
+          </NavbarItem> */}
           <NavbarItem className="hidden lg:flex">
             <Button
               isExternal
@@ -125,7 +230,7 @@ export const Navbar = () => {
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
 

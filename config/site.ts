@@ -5,14 +5,6 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Tentang Kami",
-      href: "/about",
-    },
-    {
-      label: "Portofolio",
-      href: "/pricing",
-    },
-    {
       label: "Donasi",
       href: "/donation",
     },
