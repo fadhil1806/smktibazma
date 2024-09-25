@@ -1,4 +1,7 @@
-#app { height: 100% }
+#app {
+  height: 100%
+}
+
 html,
 body {
   /* position: relative; */
@@ -22,12 +25,17 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
   display: block;
   height: 100%;
   width: 100%;
-}
+  object-fit: cover;
 
-  
+}
