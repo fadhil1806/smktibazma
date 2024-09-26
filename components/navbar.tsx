@@ -117,9 +117,8 @@ export const Navbar = () => {
                 Mitra Kami
               </DropdownItem>
               <DropdownItem
-                key="production_ready"
                 description="Layanan, Masukan & Saran"
-
+                href="/service"
                 startContent={icons.service}
               >
                 Layanan & Masukan

@@ -2,7 +2,6 @@ import React from "react";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { IconSchool, IconBuilding } from "@tabler/icons-react";
 import CarouselAsrama from './carousel-asrama';
-
 import Carousel from "./carousel";
 import Home from "@/app/page";
 
@@ -46,7 +45,11 @@ export default function App() {
           <CarouselAsrama />
         )}
         {selected === "asrama" && (
+          <>
+          
           <CarouselAsrama />
+          <Carousel />
+          </>
         )}
       </div>
     </div>

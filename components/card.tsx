@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import {
   Button,
+  card,
   Card,
   CardBody,
   CardFooter,
@@ -13,6 +14,7 @@ import {
   Skeleton,
 } from "@nextui-org/react";
 import BlurFade from "./magicui/blur-fade";
+import { IconBrandInstagram, IconBrandWhatsapp, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 
 const truncateText = (text: string, maxLength: number): string => {
   if (text.length > maxLength) {
@@ -24,8 +26,7 @@ const truncateText = (text: string, maxLength: number): string => {
 export default function CardProject() {
   const list = [
     {
-      img:
-        "/img/proyek.png",
+      img: "/img/proyek.png",
       title: "Big Data Sismako - Database",
       desc:
         "is a web platform designed to manage, analyze, and visualize large-scale data for school applications.",
@@ -57,7 +58,7 @@ export default function CardProject() {
   ];
 
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-8 pt-10 sm:mt-1 sm:pt-8 lg:mx-0 lg:max-w-none sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="mx-auto grid max-w-2xl grid-rows-1 gap-x-4 gap-y-8 pt-10 sm:mt-1 sm:pt-8 lg:mx-0 lg:max-w-none sm:grid-rows-2 lg:grid-rows-3 xl:grid-rows-4">
       {list.map((item, index) => (
         <BlurFade delay={0.25 * 4} inView key={index}>
           <Card
@@ -68,9 +69,7 @@ export default function CardProject() {
               <p className="text-tiny text-white/60 uppercase font-bold">
                 by Ordinary People
               </p>
-              <h4 className="text-white/90 font-medium text-xl">
-                SISMAKO
-              </h4>
+              <h4 className="text-white/90 font-medium text-xl">SISMAKO</h4>
             </CardHeader>
             <Image
               removeWrapper
@@ -94,6 +93,60 @@ export default function CardProject() {
           </Card>
         </BlurFade>
       ))}
+    </div>
+  );
+}
+
+const CardContact = ({ icons, title, description, link }) => {
+  return (
+    <Card className="p-4 border shadow-sm">
+      <CardHeader className="flex items-start gap-3">
+        <div className="text-blue-600">{icons}</div>
+        <div className="flex flex-col">
+          <h3 className="font-bold text-lg text-blue-800">{title}</h3>
+          <p className="text-sm text-gray-600">{description}</p>
+        </div>
+      </CardHeader>
+      <Divider />
+      <CardBody className="flex flex-col py-4">
+        <p className="text-sm text-gray-500">
+          <Link href={`mailto:${link}`} className="text-blue-600">
+            {link}
+          </Link>
+        </p>
+      </CardBody>
+    </Card>
+  );
+};
+
+export function Contact() {
+  const contact = [
+    {
+      icons: <IconBrandYoutube />,
+      title: "Youtube",
+      description: "Telusuri Media Sosial SMK TI BAZMA",
+      link: "@smktibazma",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      description: "Telusuri Media Sosial SMK TI BAZMA",
+      link: "@smktibazma",
+    },
+  ];
+  return (
+    <div className="container mx-auto">
+      <div className="grid gap-6 sm:grid-rows-2 lg:grid-rows-2">
+        {contact.map((contact, index) => (
+          <CardContact
+            key={index}
+            icons={contact.icons}
+            title={contact.title}
+            description={contact.description}
+            link={contact.link}
+          />
+        ))}
+      </div>
     </div>
   );
 }
