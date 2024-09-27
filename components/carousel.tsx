@@ -48,7 +48,7 @@ export default function Carousel({ slides }: CarouselProps) {
                             <div className='absolute inset-0'>
                                 <img
                                     src={slide.imgSrc}
-                                    alt={slide.heading}
+                                    alt="coba"
                                     className='w-full h-full object-cover object-center'
                                 />
                             </div>

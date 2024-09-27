@@ -15,6 +15,7 @@ import { Card, CardFooter, Divider, Image } from "@nextui-org/react";
 import BlurFade from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel";
 import { color } from "framer-motion";
+import PPDB from "@/components/ppdb";
 
 export default function Home() {
   const slidesData = [
@@ -130,30 +131,13 @@ export default function Home() {
         <hr className="border-b-large border-b-white mt-[50px]" />
       </section>
 
-        <div className="container mx-auto my-auto px-4 max-w-7xl">
+      <div className="container mx-auto my-auto px-4 max-w-7xl">
         <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
         <CardProject />
       </div>
 
-      <div className="mt-8 mb-8 container mx-auto my-auto px-4 max-w-7xl p-10 rounded-3xl inline-block text-center justify-center sm:ml-2 sm:mr-5" style={{ backgroundColor: "#0057B8" }}>
-        <div className="inline-block max-w-3xl text-center justify-center mt-11 mb-11">
-          <BlurFade delay={0.25} inView>
-            <h1 className={title({ color: "cyan", class: 'font-cold' })}>Ayo Daftar Sekarang Juga!&nbsp;</h1>
-          </BlurFade>
-          <BlurFade delay={0.25 * 2} inView>
-            <h2 className={subtitle({ class: "mt-4 text-white font-semibold" })}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h2>
-          </BlurFade>
-          <BlurFade delay={0.25 * 3} inView>
-            <div className="">
-              <Button color="default" className="h-11 p-5 mt-2">
-                Daftar Sekarang!
-              </Button>
-            </div>
-          </BlurFade>
-        </div>
+      <div className="container mx-auto my-auto px-4 max-w-7xl">
+      <PPDB/>
       </div>
 
       <Footer />

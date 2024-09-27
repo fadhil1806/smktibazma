@@ -48,7 +48,7 @@ export default function CarouselAsrama({ slides }: CarouselProps) {
                             <div className='absolute inset-0'>
                                 <img
                                     src={slide.imgSrc}
-                                    alt={slide.heading}
+                                    alt="{slide.heading}"
                                     className='w-full h-full object-cover object-center'
                                 />
                             </div>

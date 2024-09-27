@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="w-full flex flex-col mt-[75px]">
       {/* Bagian H1 dan Tabs */}
-      <div className="flex items-center justify-between">
+      <div className="md:flex items-center justify-between ">
         <h1 className="text-4xl text-blue-800 mb-8 font-bold">Fasilitas </h1> {/* Sejajarkan dengan Tabs */}
         <Tabs
           aria-label="Options"
@@ -46,7 +46,7 @@ export default function App() {
           <div className="flex flex-col justify-center items-center gap-4">
           
           <CarouselAsrama />
-            <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" />
+            {/* <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" /> */}
           </div>
         )}
         {selected === "asrama" && (
@@ -54,6 +54,7 @@ export default function App() {
           
           <CarouselAsrama />
 
+          {/* <Carousel /> */}
           </>
         )}
       </div>

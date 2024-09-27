@@ -93,7 +93,7 @@ function ImageWithSkeleton({ src, alt }: { src: string; alt: string }) {
       {isLoading && <Skeleton className="w-[270px] h-[170px] rounded-lg" />}
       <Image
         src={src}
-        alt={alt}
+        alt="{alt}"
         className={`object-cover rounded-xl ${isLoading ? "hidden" : "block"}`}
         width={280}
         height={340}

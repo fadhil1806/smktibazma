@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="mb-4 md:mb-0">
-                            <Image src="./logo.png" width={150} />
+                            <Image src="./logo.png" width={150} alt='Logo'/>
                             <h1 className="text-2xl font-bold mb-2 mt-2">ENERGI MASA <br />DEPAN INDONESIA</h1>
                         </div>
 

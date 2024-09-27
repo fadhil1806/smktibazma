@@ -15,36 +15,16 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Donasi",
+      href: "/donation",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Progres Siswa",
+      href: "/progress-siswa",
     },
     {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "PPDB",
+      href: "/progress-siswa",
     },
   ],
   links: {

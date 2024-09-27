@@ -77,12 +77,12 @@ export default function DocsPage() {
             </BlurFade>
           </>
 
-          <div className="flex flex-col p-6 gap-4 rounded-xl w-full">
+          <div className="flex flex-col p-4 gap-4 rounded-xl w-full">
             <div className="flex flex-col gap-4">
               <BlurFade delay={0.25 * 2} inView>
-                <h1 className="text-4xl font-bold text-blue-800 mb-4">Visi</h1>
+                <h1 className=" text-4xl font-bold text-blue-800 mb-4">Visi</h1>
                 <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
-                  <h1 className="text-3xl text-justify font-bold text-white">
+                  <h1 className="text-xl md:text-3xl text-justify font-bold text-white">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
                     berkepribadian Islami, mandiri, beprestasi dan menebar
                     manfaat.

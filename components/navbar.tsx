@@ -225,7 +225,7 @@ export const Navbar = () => {
         </NavbarItem> */}
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
@@ -236,6 +236,99 @@ export const Navbar = () => {
       <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
+        <Dropdown>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-md"
+                  endContent={icons.chevron}
+                  radius="sm"
+                  variant="light"
+                >
+                  <h1 className="font-semibold">
+
+                  Tentang Kami
+                  </h1>
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+
+                description="Informasi tentang SMK TI BAZMA"
+                href="/about"
+                startContent={icons.profile}
+              >
+                Profil Sekolah
+              </DropdownItem>
+              <DropdownItem
+                key="usage_metrics"
+                href="/partner"
+                description="Informasi tentang Mitra SMK TI BAZMA"
+
+                startContent={icons.partners}
+              >
+                Mitra Kami
+              </DropdownItem>
+              <DropdownItem
+                description="Layanan, Masukan & Saran"
+                href="/service"
+                startContent={icons.service}
+              >
+                Layanan & Masukan
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Dropdown>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-md"
+                  endContent={icons.chevron}
+                  radius="sm"
+                  variant="light"
+                >
+                  <h1 className="font-semibold">
+
+                    Portofolio
+                  </h1>
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+
+                description="Sistem Manajemen Sekolah"
+                href="https://sismako.smktibazma.sch.id/"
+                startContent={icons.sismako}
+              >
+                SISMAKO
+              </DropdownItem>
+              <DropdownItem
+                key="usage_metrics"
+                href="/partner"
+                description="Sistem Absensi Sekolah"
+
+                startContent={icons.saas}
+              >
+                SAAS
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
