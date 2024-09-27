@@ -77,12 +77,12 @@ export default function DocsPage() {
             </BlurFade>
           </>
 
-          <div className="flex flex-col bg-blue-800 p-6 gap-4 rounded-xl w-full">
-            <div className="flex flex-col gap-2">
+          <div className="flex flex-col p-6 gap-4 rounded-xl w-full">
+            <div className="flex flex-col gap-4">
               <BlurFade delay={0.25 * 2} inView>
-                <h1 className="text-4xl font-bold text-white mb-2">Visi</h1>
-                <div className="p-4 bg-white rounded-xl">
-                  <h1 className="text-2xl font-bold text-blue-800">
+                <h1 className="text-4xl font-bold text-blue-800 mb-4">Visi</h1>
+                <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
+                  <h1 className="text-3xl text-justify font-bold text-white">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
                     berkepribadian Islami, mandiri, beprestasi dan menebar
                     manfaat.
@@ -92,26 +92,26 @@ export default function DocsPage() {
             </div>
             <div className="flex flex-col gap-4">
               <BlurFade delay={0.25 * 2} inView>
-                <h1 className="text-4xl font-bold text-white mb-2">Misi</h1>
-                <Accordion variant="shadow">
+                <h1 className="text-4xl font-bold text-blue-800 mb-4">Misi</h1>
+                <Accordion variant="shadow" className="text-lg">
                   <AccordionItem
                     key="1"
                     aria-label="Accordion 1"
-                    title="Accordion 1"
+                    title="Misi 1"
                   >
                     Menyelenggarkan Sekolah Menengah Kejuruan (SMK) yang berkualitas
                   </AccordionItem>
                   <AccordionItem
                     key="2"
                     aria-label="Accordion 2"
-                    title="Accordion 2"
+                    title="Misi 2"
                   >
                     Melahirkan lulusan yang berkarakter unggul siap kerja
                   </AccordionItem>
                   <AccordionItem
                     key="3"
                     aria-label="Accordion 3"
-                    title="Accordion 3"
+                    title="Misi 3"
                   >
                     Mewujudkan generasi SDM yang berdaya saing global.
                   </AccordionItem>

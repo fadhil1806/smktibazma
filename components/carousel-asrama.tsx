@@ -1,18 +1,40 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardHeader, CardFooter, Button, Image } from "@nextui-org/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 
 const CarouselAsrama: React.FC = () => {
+  const asrama = [
+    {categories:"Sekolah",
+      title:"Gedung Asrama",
+      img:"https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
+
+    },
+    {categories:"Sekolah",
+      title:"Masjid & Aula",
+      img:"https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
+
+    },
+    {categories:"Sekolah",
+      title:"Ruang Kelas & Lab",
+      img:"https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
+
+    },
+    {categories:"Sekolah",
+      title:"Lapangan Olahraga",
+      img:"https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
+
+    },
+  ];
   return (
     <>
       <Swiper
-        slidesPerView={1}  // Set default for mobile
+        slidesPerView={1} // Set default for mobile
         spaceBetween={30}
         breakpoints={{
           640: { slidesPerView: 2 }, // For small screens
@@ -25,27 +47,25 @@ const CarouselAsrama: React.FC = () => {
         modules={[Pagination]}
         className="mySwiper w-full"
       >
-        {[...Array(6)].map((_, index) => (
+        {asrama.map((item, index) => (
           <SwiperSlide key={index}>
             <Card className="w-full h-[300px]">
               <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-                <h4 className="text-black font-medium text-2xl">Acme camera</h4>
+                <p className="text-tiny text-white/60 uppercase font-bold">
+                  {item.categories}
+                </p>
+                <h4 className="text-white font-bold text-xl">{item.title}</h4>
               </CardHeader>
               <Image
                 removeWrapper
                 alt="Card example background"
                 className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-                src="https://nextui.org/images/card-example-6.jpeg"
+                src={item.img}
               />
-              <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+              <CardFooter className="absolute bg-gray-500/50 bottom-0 border-t-1 border-zinc-100/30 z-10 justify-between">
                 <div>
-                  <p className="text-black text-tiny">Available soon.</p>
-                  <p className="text-black text-tiny">Get notified.</p>
+                  <p className="text-white text-tiny">Available soon.</p>
                 </div>
-                <Button className="text-tiny" color="primary" radius="full" size="sm">
-                  Notify Me
-                </Button>
               </CardFooter>
             </Card>
           </SwiperSlide>

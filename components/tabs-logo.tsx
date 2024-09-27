@@ -92,7 +92,7 @@ export default function TabsLogo() {
                     />
                   </span>
                   <div className="w-2/3">
-                    <h1 className="text-xl font-bold">Rumah</h1>
+                    <h1 className="text-xl font-bold">Huruf TI</h1>
                     <p className="text-md text-justify">
                       Akronim dari Teknologi Informasi.
                     </p>

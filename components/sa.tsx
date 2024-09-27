@@ -4,6 +4,7 @@ import { IconSchool, IconBuilding } from "@tabler/icons-react";
 import CarouselAsrama from './carousel-asrama';
 import Carousel from "./carousel";
 import Home from "@/app/page";
+import Image from "next/image";
 
 
 
@@ -42,13 +43,17 @@ export default function App() {
       {/* Konten di bawah H1 dan Tabs */}
       <div className="mt-4">
         {selected === "sekolah" && (
+          <div className="flex flex-col justify-center items-center gap-4">
+          
           <CarouselAsrama />
+            <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" />
+          </div>
         )}
         {selected === "asrama" && (
           <>
           
           <CarouselAsrama />
-          <Carousel />
+
           </>
         )}
       </div>
