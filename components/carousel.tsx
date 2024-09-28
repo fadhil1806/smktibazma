@@ -56,7 +56,7 @@ export default function Carousel({ slides }: CarouselProps) {
                             <div className='absolute inset-y-0 left-0 w-full bg-gradient-to-tr from-blue-800 to-transparent'></div>
 
                             <div className='relative z-10 w-full flex items-end h-full'>
-                                <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-center mb-10'>
+                                <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-start mb-10'>
                                     <div className='w-full md:w-1/2'>
                                         <h1 className='text-4xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
                                             {slide.heading}

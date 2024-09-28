@@ -82,9 +82,9 @@ export default function DocsPage() {
               <BlurFade delay={0.25 * 2} inView>
                 <h1 className=" text-4xl font-bold text-blue-800 mb-4">Visi</h1>
                 <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
-                  <h1 className="text-xl md:text-3xl text-justify font-bold text-white">
+                  <h1 className="text-3xl font-bold text-white">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
-                    berkepribadian Islami, mandiri, beprestasi dan menebar
+                    berkepribadian Islami, mandiri, berprestasi dan menebar
                     manfaat.
                   </h1>
                 </div>

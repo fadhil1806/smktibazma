@@ -118,15 +118,16 @@ const CardContact: FC<CardContactProps> = ({ icons, title, description, link }) 
 
 export function Contact() {
   const contact = [
+    
     {
-      icons: <IconBrandYoutube />,
-      title: "Youtube",
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
       description: "Telusuri Media Sosial SMK TI BAZMA",
       link: "@smktibazma",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
+      icons: <IconBrandYoutube />,
+      title: "Youtube",
       description: "Telusuri Media Sosial SMK TI BAZMA",
       link: "@smktibazma",
     },
