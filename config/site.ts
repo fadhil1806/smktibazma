@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       label: "Progres Siswa",
-      href: "/progress-siswa",
+      href: "https://sismako.smktibazma.sch.id/smktibazma.sch.id",
     },
   ],
   navMenuItems: [
