@@ -120,7 +120,11 @@ export default function DocsPage() {
             </div>
           </div>
 
+        
+
           <App />
+          
+
 
         </div>
         {/* <CarouselAsrama slides={slidesData} /> */}

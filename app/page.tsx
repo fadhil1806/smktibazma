@@ -5,7 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-import CardProject from "@/components/card";
+import CardProject, { CardTest } from "@/components/card";
 import { SkillsMarquee } from "@/components/demo";
 import Footer from "@/components/footer";
 import Description from "@/components/desc";
@@ -25,7 +25,7 @@ export default function Home() {
       heading: "Energi Masa Depan Indonesia",
     },
     {
-      imgSrc: "https://swiperjs.com/demos/images/nature-2.jpg",
+      imgSrc: "/img/silat.JPG",
       heading: "Keindahan Alam",
     },
     {
@@ -66,7 +66,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="max-w-[600px] text-lg">
+            <div className="max-w-[600px] text-lg text-justify">
               <p>
                 Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                 BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -92,14 +92,14 @@ export default function Home() {
         className="w-full text-white py-[75px] my-[75px]"
         style={{ backgroundColor: "#0057B8" }}
       >
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4 max-w-7xl ">
           <BlurFade delay={0.25 * 2} inView>
-            <div className="flex flex-col-reverse md:flex-row justify-between">
-              <div className=" grid mb-4 md:mb-0 max-w-[625px] gap-5">
-                <h1 className="text-4xl font-bold mb-2 mt-2">
+            <div className="flex flex-col-reverse lg:flex-row items-center  justify-between">
+              <div className=" grid mb-4 lg:mb-0 max-w-[625px] gap-5">
+                <h1 className="text-4xl font-bold mb-2 mt-2 text-center lg:text-start">
                   Sambutan Kepala Sekolah
                 </h1>
-                <p className="mt-2 font-regular text-lg">
+                <p className="mt-2 font-regular text-lg text-justify">
                   Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                   BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
                   bagi anak-anak tidak mampu. Pembangunan sekolah, baik
@@ -107,14 +107,14 @@ export default function Home() {
                   wakaf dan sumber dana sosial kemanusiaan lainnya yang
                   diamanahkan oleh masyarakat.
                 </p>
-                <h1 className="text-3xl font-semibold mt-3">
+                <h1 className="text-3xl font-semibold mt-3 text-center lg:text-start">
                   - Ahmad Dahlan, S.Ag.
                 </h1>
               </div>
               <Card
                 isFooterBlurred
                 radius="lg"
-                className="border-none object-fit"
+                className="border-none max-w-[275px] object-fit"
               >
                 <Image
                   isBlurred
@@ -131,48 +131,21 @@ export default function Home() {
         <hr className="border-b-large border-b-white mt-[50px]" />
       </section>
 
-      <div className="container mx-auto my-auto px-4 max-w-7xl">
-        <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
-        <CardProject />
-      </div>
-
-
-      <div className="container mx-auto my-auto px-4 max-w-7xl">
-      <PPDB/>
-      </div>
-
-
-
-      <div
-        className="mt-8 mb-8 container mx-auto my-auto px-4 max-w-7xl p-10 rounded-3xl inline-block text-center justify-center sm:ml-2 sm:mr-5"
-        style={{ backgroundColor: "#0057B8" }}
-      >
-        <div className="inline-block max-w-3xl text-center justify-center mt-11 mb-11">
-          <BlurFade delay={0.25} inView>
-            <h1 className={title({ color: "cyan", class: "font-cold" })}>
-              Ayo Daftar Sekarang Juga!&nbsp;
-            </h1>
-          </BlurFade>
-          <BlurFade delay={0.25 * 2} inView>
-            <h2
-              className={subtitle({ class: "mt-4 text-white font-semibold" })}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h2>
-          </BlurFade>
-
-          <BlurFade delay={0.25 * 3} inView>
-            <div className="">
-              <Button color="default" className="h-11 p-5 mt-2">
-                Daftar Sekarang!
-              </Button>
-            </div>
-          </BlurFade>
+      <section className="container mx-auto px-4 max-w-7xl">
+        <h1 className="text-4xl font-bold text-blue-800">Jurusan</h1>
+        <div>
+          <h1>Sistem, Informatika, Jaringan, & Aplikasi</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus, ipsa hic quaerat assumenda dolores consequuntur laudantium fugit ab consequatur!</p>
         </div>
+      </section>
 
-
+      <div className="container mx-auto px-4 max-w-7xl mb-[75px]">
+        <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
+        <CardProject /> 
       </div>
+
+
+
 
       <Footer />
     </section>

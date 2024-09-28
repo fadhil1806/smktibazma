@@ -1,6 +1,6 @@
 export default function Banner({ imgSrc, heading }) {
   return (
-    <div className='relative w-full h-[615px]'>
+    <div className='relative w-full h-[768px]'>
       <div className='absolute inset-0'>
         <img
           src={imgSrc}

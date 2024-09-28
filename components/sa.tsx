@@ -1,10 +1,11 @@
 import React from "react";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { IconSchool, IconBuilding } from "@tabler/icons-react";
-import CarouselAsrama from './carousel-asrama';
+import {  CarouselAsrama,CarouselSekolah } from './carousel-asrama';
 import Carousel from "./carousel";
 import Home from "@/app/page";
 import Image from "next/image";
+import BlurFade from "./magicui/blur-fade";
 
 
 
@@ -14,6 +15,8 @@ export default function App() {
   const [selected, setSelected] = React.useState("photos");
 
   return (
+    <BlurFade>
+
     <div className="w-full flex flex-col mt-[75px]">
       {/* Bagian H1 dan Tabs */}
       <div className="md:flex items-center justify-between ">
@@ -45,8 +48,8 @@ export default function App() {
         {selected === "sekolah" && (
           <div className="flex flex-col justify-center items-center gap-4">
           
-          <CarouselAsrama />
-            {/* <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" /> */}
+          <CarouselSekolah />
+            <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" />
           </div>
         )}
         {selected === "asrama" && (
@@ -59,5 +62,6 @@ export default function App() {
         )}
       </div>
     </div>
+    </BlurFade>
   );
 }

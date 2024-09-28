@@ -26,7 +26,7 @@ interface CarouselProps {
 // New Carousel component with props
 export default function Carousel({ slides }: CarouselProps) {
     return (
-        <div className='w-full h-[615px]'>
+        <div className='w-full h-[768px]'>
             <Swiper
                 loop={true}
                 spaceBetween={30}
@@ -56,14 +56,14 @@ export default function Carousel({ slides }: CarouselProps) {
                             <div className='absolute inset-y-0 left-0 w-full bg-gradient-to-tr from-blue-800 to-transparent'></div>
 
                             <div className='relative z-10 w-full flex items-end h-full'>
-                                <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-start mb-10'>
-                                    <div className='w-full md:w-1/2'>
+                                <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-start mb-16'>
+                                    <div className='w-full md:w-1/2 '>
                                         <h1 className='text-4xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
                                             {slide.heading}
                                         </h1>
                                     </div>
                                     <div className='w-full md:w-1/2 mt-4 md:mt-0 md:ml-6'>
-                                        <p className='text-lg'>
+                                        <p className='text-xl'>
                                             {/* {slide.desc} */}
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </p>

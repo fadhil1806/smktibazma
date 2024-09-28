@@ -10,22 +10,22 @@ import { Pagination } from "swiper/modules";
 
 const CarouselAsrama: React.FC = () => {
   const asrama = [
-    {categories:"Sekolah",
+    {categories:"Asrama",
       title:"Gedung Asrama",
       img:"https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
 
     },
-    {categories:"Sekolah",
+    {categories:"Asrama",
       title:"Masjid & Aula",
       img:"https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
 
     },
-    {categories:"Sekolah",
+    {categories:"Asrama",
       title:"Ruang Kelas & Lab",
       img:"https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
 
     },
-    {categories:"Sekolah",
+    {categories:"Asrama",
       title:"Lapangan Olahraga",
       img:"https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
 
@@ -74,5 +74,73 @@ const CarouselAsrama: React.FC = () => {
     </>
   );
 };
+const CarouselSekolah: React.FC = () => {
+  const sekolah = [
+    {categories:"Sekolah",
+      title:"Gedung Asrama",
+      img:"https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
 
-export default CarouselAsrama;
+    },
+    {categories:"Sekolah",
+      title:"Masjid & Aula",
+      img:"https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
+
+    },
+    {categories:"Sekolah",
+      title:"Ruang Kelas & Lab",
+      img:"https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
+
+    },
+    {categories:"Sekolah",
+      title:"Lapangan Olahraga",
+      img:"https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
+
+    },
+  ];
+
+  
+  return (
+    <>
+      <Swiper
+        slidesPerView={1} // Set default for mobile
+        spaceBetween={30}
+        breakpoints={{
+          640: { slidesPerView: 2 }, // For small screens
+          768: { slidesPerView: 3 }, // For tablets
+          1024: { slidesPerView: 4 }, // For desktops
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper w-full"
+      >
+        {sekolah.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Card className="w-full h-[300px]">
+              <CardHeader className="absolute z-10 top-1 flex-col items-start">
+                <p className="text-tiny text-white/60 uppercase font-bold">
+                  {item.categories}
+                </p>
+                <h4 className="text-white font-bold text-xl">{item.title}</h4>
+              </CardHeader>
+              <Image
+                removeWrapper
+                alt="Card example background"
+                className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+                src={item.img}
+              />
+              <CardFooter className="absolute bg-gray-500/50 bottom-0 border-t-1 border-zinc-100/30 z-10 justify-between">
+                <div>
+                  <p className="text-white text-tiny">Available soon.</p>
+                </div>
+              </CardFooter>
+            </Card>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
+};
+
+export {CarouselAsrama, CarouselSekolah};
