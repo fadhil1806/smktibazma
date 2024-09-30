@@ -49,7 +49,7 @@ export default function App() {
           <div className="flex flex-col justify-center items-center gap-4">
           
           <CarouselSekolah />
-            <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" className="w-auto h-auto max-w-screen-lg" />
+            <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img"  />
           </div>
         )}
         {selected === "asrama" && (

@@ -127,11 +127,11 @@ export default function DocsPage() {
 
         </div>
         {/* <CarouselAsrama slides={slidesData} /> */}
-        <div className="lg:px-10 max-w-6xl">
+        <div className="container mx-auto px-4 max-w-5xl py-10 ">
           <App />
           <h1 className="px-10 text-4xl font-bold text-blue-800 mr-5" >Makna logo</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-            <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" className=" h-auto" alt="logo" />
+            <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" alt="logo" />
             <TabsLogo />
           </div>
         </div>

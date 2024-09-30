@@ -1,21 +1,10 @@
 "use client";
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import CardProject, { CardTest, Contact, Ppdb } from "@/components/card";
-import { SkillsMarquee } from "@/components/demo";
 import Footer from "@/components/footer";
-import Description from "@/components/desc";
-import Banner from "@/components/banner";
 import { Button } from "@nextui-org/button";
 import { Card, CardFooter, Divider, Image } from "@nextui-org/react";
 import BlurFade from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel";
-import { color } from "framer-motion";
-import PPDB from "@/components/ppdb";
 
 export default function Home() {
   const slidesData = [
@@ -51,7 +40,7 @@ export default function Home() {
           </>
         }
       /> */}
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={0.25 * 2} inView>
         <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col justify-between h-full">
@@ -186,13 +175,19 @@ export default function Home() {
       </section>
 
       <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
-      <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
+        <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
         <Ppdb />
       </div>
 
       <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
-      <h1 className="text-4xl font-bold text-blue-800 mb-4">Proyek Siswa</h1>
+        <BlurFade delay={0.25 * 2} inView>
+
+          <h1 className="text-4xl font-bold text-blue-800 mb-4">Proyek Siswa</h1>
+        </BlurFade>
+        <BlurFade delay={0.25 * 3} inView>
+
           <CardProject />
+        </BlurFade>
       </div>
       <Footer />
     </section>

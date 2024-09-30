@@ -12,6 +12,7 @@ import './styles.css';
 
 // Import required modules
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import BlurFade from './magicui/blur-fade';
 
 interface Slide {
     imgSrc: string;
@@ -58,15 +59,19 @@ export default function Carousel({ slides }: CarouselProps) {
                             <div className='relative z-10 w-full flex items-end h-full'>
                                 <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-start mb-16'>
                                     <div className='w-full md:w-1/2 '>
-                                        <h1 className='text-4xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
-                                            {slide.heading}
-                                        </h1>
+                                        <BlurFade delay={0.25} inView>
+                                            <h1 className='text-4xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
+                                                {slide.heading}
+                                            </h1>
+                                        </BlurFade>
                                     </div>
                                     <div className='w-full md:w-1/2 mt-4 md:mt-0 md:ml-6'>
-                                        <p className='text-xl'>
-                                            {/* {slide.desc} */}
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </p>
+                                        <BlurFade delay={0.25} inView>
+
+                                            <p className='text-xl'>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </BlurFade>
                                     </div>
                                 </div>
                             </div>
@@ -74,6 +79,6 @@ export default function Carousel({ slides }: CarouselProps) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </div >
     );
 }
