@@ -14,7 +14,7 @@ import {
   Skeleton,
 } from "@nextui-org/react";
 import BlurFade from "./magicui/blur-fade";
-import { IconBrandInstagram, IconBrandWhatsapp, IconBrandYoutube, IconMail } from "@tabler/icons-react";
+import { IconBrandInstagram, IconBrandWhatsapp, IconBrandYoutube, IconMail, IconBuildings, IconHeartHandshake, IconBuildingMosque, IconVocabulary, IconSchool, IconBooks } from "@tabler/icons-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -32,8 +32,9 @@ const truncateText = (text: string, maxLength: number): string => {
 export default function CardProject() {
   const list = [
     {
-      img: "/img/proyek.png",
-      title: "Big Data Sismako - Database",
+      img: "/img/proyek3.png",
+      Category: "SISMAKO",
+      title: "Big Data SISMAKO",
       desc:
         "is a web platform designed to manage, analyze, and visualize large-scale data for school applications.",
       view: "https://sismako.smktibazma.sch.id/",
@@ -83,22 +84,19 @@ export default function CardProject() {
           <SwiperSlide key={index}>
                       <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
             <CardHeader className="absolute z-10 top-1 flex-col items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-              <h4 className="text-black font-medium text-2xl">Acme camera</h4>
+              <p className="text-tiny text-white/60 uppercase font-bold">{item.Category}</p>
+              <h4 className="text-white font-bold text-2xl">{item.title}</h4>
             </CardHeader>
             <Image
               removeWrapper
               alt="Card example background"
-              className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-              src="https://nextui.org/images/card-example-6.jpeg"
+              className="z-0 w-full h-full object-cover"
+              src={item.img}
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
+              
               <Button className="text-tiny" color="primary" radius="full" size="sm">
-                Notify Me
+                Get in touch
               </Button>
             </CardFooter>
           </Card>
@@ -244,17 +242,19 @@ interface CardPpdbProps {
 
 const CardPpdb: FC<CardPpdbProps> = ({ icons, title, desc }) => {
   return (
-    <Card className="p-4 border shadow-sm">
-      <CardHeader className="flex items-start gap-3">
-        <div className="text-blue-600">{icons}</div>
-        
-      </CardHeader>
-      <CardBody className="flex flex-col py-4">
-      <div className="flex flex-col">
-          <h3 className="font-bold text-lg text-blue-800">{title}</h3>
-          <p className="text-sm text-gray-600">{desc}</p>
+    <Card className="max-w-[400px] p-3 bg-blue-800 text-white">
+      <CardHeader className="flex gap-3">
+        <div>{icons}</div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold">{title}</h1>
         </div>
+      </CardHeader>
+      
+      <CardBody>
+        {desc}
       </CardBody>
+      
+      
     </Card>
   )
 }
@@ -262,39 +262,39 @@ const CardPpdb: FC<CardPpdbProps> = ({ icons, title, desc }) => {
 export function Ppdb() {
   const ppdb = [
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconSchool size={30} />,
+      title: "Beasiswa Penuh",
+      desc: "SMK TI Bazma memberikan kesempatan belajar siswa berprestasi dari seluruh Indonesia dengan menunjang beasiswa penuh hingga lulus.",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconBooks />,
+      title: "Kurikulum Terpadu",
+      desc: "Memadukan Kurikulum Nasional, Kurikulum Industri dan Kurikulum berbasis Islamic Boarding School (Asrama),",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconBuildings />,
+      title: "Fasilitas Lengkap",
+      desc: "Subsidi penunjang pendidikan seperti perlengkapan belajar, asrama, kesehatan, makan-minum, transportasi penjemputan dan kepulangan",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconVocabulary />,
+      title: "Program Belajar 4 Tahun",
+      desc: "Program keahlian fokus pada SIJA, dan Program pembelajaran 4 tahun, dengan 1 tahun dikhususkan untuk Praktek Kerja Industri (Prakerin).",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconHeartHandshake />,
+      title: "Peluang Magand",
+      desc: "SMK TI BAZMA menjalin kemitraan dengan BUMN, menyediakan peluang magang dengan pencapaian kompetensi profesional yang unggul.",
     },
     {
-      icons: <IconBrandInstagram />,
-      title: "Instagram",
-      desc: "Telusuri Media Sosial SMK TI BAZMA",
+      icons: <IconBuildingMosque />,
+      title: "Pesantren Berbasis IT",
+      desc: "SMK TI BAZMA membekali siswa dengan program unggulan berbasis IT dan hafalan Al-Qur'an minimal 3 Juz (28, 29, 30). Untuk mencetak pemimpin berkarakter unggul.",
     },
   ]
 
   return (
-    <div className="grid gap-6 sm:grid-rows-2 lg:grid-rows-2">
+    <div className="grid gap-6 md:grid-cols-3 justify-center items-center">
       {
         ppdb.map((ppdbd, index)=> (
           <CardPpdb
