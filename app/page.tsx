@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/button";
 import { Card, CardFooter, Divider, Image } from "@nextui-org/react";
 import BlurFade from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel";
+import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 
 export default function Home() {
   const slidesData = [
@@ -100,20 +101,23 @@ export default function Home() {
                   - Ahmad Dahlan, S.Ag.
                 </h1>
               </div>
+              <NeonGradientCard className="border-none max-w-[275px] object-fit">
+
               <Card
                 isFooterBlurred
                 radius="lg"
-                className="border-none max-w-[275px] object-fit"
+                className="p-0"
               >
                 <Image
                   isBlurred
                   alt="Woman listing to music"
-                  className="object-cover "
+                  className="object-cover w-full"
                   height={340}
                   src="./pak_dahlan.avif"
                   width={275}
                 />
               </Card>
+              </NeonGradientCard>
             </div>
           </BlurFade>
         </div>

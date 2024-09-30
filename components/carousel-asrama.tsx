@@ -10,25 +10,25 @@ import { Pagination } from "swiper/modules";
 
 const CarouselAsrama: React.FC = () => {
   const asrama = [
-    {categories:"Asrama",
-      title:"Gedung Asrama",
-      img:"https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
-
+    {
+      categories: "Asrama",
+      title: "Tempat Wudhu",
+      img: "/fasilitas/asrama/ablution-place.avif",
     },
-    {categories:"Asrama",
-      title:"Masjid & Aula",
-      img:"https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
-
+    {
+      categories: "Asrama",
+      title: "Ruang Dapur",
+      img: "/fasilitas/asrama/kitchen.avif",
     },
-    {categories:"Asrama",
-      title:"Ruang Kelas & Lab",
-      img:"https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
-
+    {
+      categories: "Asrama",
+      title: "Lemari",
+      img: "/fasilitas/asrama/cupboard.avif",
     },
-    {categories:"Asrama",
-      title:"Lapangan Olahraga",
-      img:"https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
-
+    {
+      categories: "Asrama",
+      title: "Tempat Tidur",
+      img: "/fasilitas/asrama/bed.avif",
     },
   ];
   return (
@@ -76,29 +76,33 @@ const CarouselAsrama: React.FC = () => {
 };
 const CarouselSekolah: React.FC = () => {
   const sekolah = [
-    {categories:"Sekolah",
-      title:"Gedung Asrama",
-      img:"https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
+    {
+      categories: "Sekolah",
+      title: "Gedung Asrama",
+      img: "https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg",
 
     },
-    {categories:"Sekolah",
-      title:"Masjid & Aula",
-      img:"https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
+    {
+      categories: "Sekolah",
+      title: "Masjid & Aula",
+      img: "https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg",
 
     },
-    {categories:"Sekolah",
-      title:"Ruang Kelas & Lab",
-      img:"https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
+    {
+      categories: "Sekolah",
+      title: "Ruang Kelas & Lab",
+      img: "https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg",
 
     },
-    {categories:"Sekolah",
-      title:"Lapangan Olahraga",
-      img:"https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
+    {
+      categories: "Sekolah",
+      title: "Lapangan Olahraga",
+      img: "https://smktibazma.sch.id/static/media/lapangan.8feef39bc2c2eaa90525.jpg",
 
     },
   ];
 
-  
+
   return (
     <>
       <Swiper
@@ -143,4 +147,4 @@ const CarouselSekolah: React.FC = () => {
   );
 };
 
-export {CarouselAsrama, CarouselSekolah};
+export { CarouselAsrama, CarouselSekolah };

@@ -21,7 +21,8 @@ interface Slide {
 }
 
 interface CarouselProps {
-    slides: Slide[];
+    slides: Slide[],
+
 }
 
 // New Carousel component with props
@@ -69,7 +70,7 @@ export default function Carousel({ slides }: CarouselProps) {
                                         <BlurFade delay={0.25} inView>
 
                                             <p className='text-xl'>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                {slide.desc ?? '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
                                             </p>
                                         </BlurFade>
                                     </div>

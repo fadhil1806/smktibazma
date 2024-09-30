@@ -18,26 +18,6 @@ import TabsLogo from "@/components/tabs-logo";
 import KompotensiKeahlian from "@/components/accordion-kompentensi-keahlian";
 
 export default function DocsPage() {
-  const slidesData = [
-    {
-      imgSrc:
-        "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg",
-      heading: "Energi Masa Depan Indonesia",
-    },
-    {
-      imgSrc: "https://swiperjs.com/demos/images/nature-2.jpg",
-      heading: "Keindahan Alam",
-    },
-    {
-      imgSrc: "https://swiperjs.com/demos/images/nature-3.jpg",
-      heading: "Petualangan",
-    },
-    {
-      imgSrc: "https://swiperjs.com/demos/images/nature-4.jpg",
-      heading: "Keajaiban Dunia",
-    },
-  ];
-
   return (
     <div>
       <section className="flex flex-col items-center justify-center gap-4">
@@ -82,7 +62,7 @@ export default function DocsPage() {
               <BlurFade delay={0.25 * 2} inView>
                 <h1 className=" text-4xl font-bold text-blue-800 mb-4">Visi</h1>
                 <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
-                  <h1 className="text-3xl font-bold text-white">
+                  <h1 className="text-xl lg:text-3xl font-bold text-white">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
                     berkepribadian Islami, mandiri, berprestasi dan menebar
                     manfaat.
@@ -120,25 +100,29 @@ export default function DocsPage() {
             </div>
           </div>
 
-        
 
-          
+
+
 
 
         </div>
-        {/* <CarouselAsrama slides={slidesData} /> */}
-        <div className="container mx-auto px-4 max-w-5xl py-10 ">
+        <div className="container mx-auto px-4 max-w-5xl py-2 ">
           <App />
-          <h1 className="px-10 text-4xl font-bold text-blue-800 mr-5" >Makna logo</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-            <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" alt="logo" />
-            <TabsLogo />
-          </div>
+          <BlurFade delay={0.25 * 3} inView>
+            <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-4 mb-4">Makna logo</h1>
+          </BlurFade>
+          <BlurFade delay={0.25 * 4} inView>
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
+              <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" alt="logo" />
+              <TabsLogo />
+            </div>
+          </BlurFade>
         </div>
 
         <div className="container mx-auto my-auto px-4 max-w-6xl py-10">
-          <KompotensiKeahlian />
-
+          <BlurFade delay={0.25 * 2} inView>
+            <KompotensiKeahlian />
+          </BlurFade>
         </div>
         <Footer />
       </section>
