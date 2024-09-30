@@ -17,7 +17,6 @@ import Carousel from "@/components/carousel";
 import { color } from "framer-motion";
 import PPDB from "@/components/ppdb";
 
-
 export default function Home() {
   const slidesData = [
     {
@@ -53,7 +52,7 @@ export default function Home() {
         }
       /> */}
       <BlurFade delay={0.25} inView>
-        <div className="container mx-auto my-[75px] px-4 max-w-6xl ">
+        <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col justify-between h-full">
               <h1 className="text-4xl font-bold text-blue-800">
@@ -67,7 +66,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="max-w-[600px] text-gray-400 text-lg text-justify">
+            <div className="max-w-[600px] text-lg text-justify">
               <p>
                 Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                 BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -93,14 +92,14 @@ export default function Home() {
         className="w-full text-white py-[75px] my-[75px]"
         style={{ backgroundColor: "#0057B8" }}
       >
-        <div className="container mx-auto px-4 max-w-6xl ">
+        <div className="container mx-auto px-4 max-w-7xl ">
           <BlurFade delay={0.25 * 2} inView>
-            <div className=" flex flex-col-reverse lg:flex-row items-center  justify-between">
+            <div className="flex flex-col-reverse lg:flex-row items-center  justify-between">
               <div className=" grid mb-4 lg:mb-0 max-w-[625px] gap-5">
                 <h1 className="text-4xl font-bold mb-2 mt-2 text-center lg:text-start">
                   Sambutan Kepala Sekolah
                 </h1>
-                <p className="mt-2 font-regular text-xl text-justify">
+                <p className="mt-2 font-regular text-lg text-justify">
                   Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                   BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
                   bagi anak-anak tidak mampu. Pembangunan sekolah, baik
@@ -132,58 +131,56 @@ export default function Home() {
         <hr className="border-b-large border-b-white mt-[50px]" />
       </section>
 
-      <section className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl  font-black text-blue-800 text-center uppercase mb-8">
-          "Sistem, Informatika, Jaringan, & Aplikasi" <br /> - SIJA -
+      <section className="container mx-auto px-4 max-w-7xl">
+        <h1 className="text-3xl lg:text-6xl font-black text-blue-800 text-center uppercase mb-8">
+          "Sistem, Informatika, Jaringan, & Aplikasi" - SIJA -
         </h1>
-        
-        <div className="flex flex-col lg:flex-row items-center justify-center ">
-          <div className="flex flex-col  lg:w-1/2 mb-8 lg:me-8">
 
-          <p className="text-justify text-xl text-gray-400 mb-4">
-            Merupakan gabungan dari jurusan Teknik Komputer & Jaringan (TKJ) dan
-            Rekayasa Perangkat Lunak (RPL) yang dilengkapi dengan teknologi
-            terbaru: cloud computing.
-            
-          </p>
-            <p className="text-justify text-xl text-gray-400 "> 
-            Kompetensi Keahlian:
-            <br />  
-            CLOUD COMPUTING (IaaS, PaaS, SaaS) - SISTEM INTERNET OF THINGS
-            SISTEM KEAMANAN JARINGAN PRODUK KREATIF DAN KEWIRAUSAHAAN
+        <div className="grid md:flex between items-center justify-between ">
+          <div className="flex flex-col lg:w-1/2 me-12">
+            <p className="text-justify text-xl lg:text-2xl text-gray-400 mb-4">
+              Merupakan gabungan dari jurusan Teknik Komputer & Jaringan (TKJ) dan
+              Rekayasa Perangkat Lunak (RPL) yang dilengkapi dengan teknologi
+              terbaru: cloud computing.
+
+            </p>
+            <p className="text-justify text-xl lg:text-2xl text-gray-400 ">
+              Kompetensi Keahlian:
+              <br />
+              CLOUD COMPUTING (IaaS, PaaS, SaaS) - SISTEM INTERNET OF THINGS
+              SISTEM KEAMANAN JARINGAN PRODUK KREATIF DAN KEWIRAUSAHAAN
             </p>
           </div>
-          <div className="flex gap-4 items-center">
-          <Card
-  isFooterBlurred
-  radius="lg"
-  className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
->
-  <Image
-    alt="Woman listening to music"
-    className="object-cover filter transition hover:duration-700 ease-in-out grayscale group-hover:grayscale-0" 
-    // Tambahkan filter grayscale dan hilangkan saat hover
-    height={340}
-    src="/img/Mufiz.jpg"
-    width={340}
-  />
-</Card>
-<Card
-  isFooterBlurred
-  radius="lg"
-  className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
->
-  <Image
-    alt="Woman listening to music"
-    className="object-cover filter transition duration-700 ease-in-out grayscale group-hover:grayscale-0" 
-    // Tambahkan filter grayscale dan hilangkan saat hover
-    height={340}
-    src="./pak_dahlan.avif"
-    width={340}
-  />
-</Card>
+          <div className="flex gap-4">
 
-            
+            <Card
+              isFooterBlurred
+              radius="lg"
+              className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
+            >
+              <Image
+                alt="Woman listening to music"
+                className="object-cover filter transition hover:duration-700 ease-in-out grayscale group-hover:grayscale-0"
+                // Tambahkan filter grayscale dan hilangkan saat hover
+                height={400}
+                src="/img/Mufiz.jpg"
+                width={400}
+              />
+            </Card>
+            <Card
+              isFooterBlurred
+              radius="lg"
+              className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
+            >
+              <Image
+                alt="Woman listening to music"
+                className="object-cover filter transition duration-700 ease-in-out grayscale group-hover:grayscale-0"
+                // Tambahkan filter grayscale dan hilangkan saat hover
+                height={400}
+                src="./pak_dahlan.avif"
+                width={400}
+              />
+            </Card>
           </div>
         </div>
       </section>
@@ -193,10 +190,11 @@ export default function Home() {
         <Ppdb />
       </div>
       <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
-        <CardProject />
+        <div className="container mx-auto px-4 max-w-7xl mb-[75px] mt-4">
+          <h1 className="text-4xl font-bold text-blue-800 mb-4">Proyek Siswa</h1>
+          <CardProject />
+        </div>
       </div>
-
       <Footer />
     </section>
   );
