@@ -185,15 +185,14 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
+      <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
+      <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
         <Ppdb />
       </div>
-      <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
-        <div className="container mx-auto px-4 max-w-7xl mb-[75px] mt-4">
-          <h1 className="text-4xl font-bold text-blue-800 mb-4">Proyek Siswa</h1>
+
+      <div className="container mx-auto my-[75px] px-4 max-w-7xl ">
+      <h1 className="text-4xl font-bold text-blue-800 mb-4">Proyek Siswa</h1>
           <CardProject />
-        </div>
       </div>
       <Footer />
     </section>
