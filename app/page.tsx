@@ -5,7 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-import CardProject, { CardTest } from "@/components/card";
+import CardProject, { CardTest, Contact } from "@/components/card";
 import { SkillsMarquee } from "@/components/demo";
 import Footer from "@/components/footer";
 import Description from "@/components/desc";
@@ -132,20 +132,65 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 max-w-7xl">
-        <h1 className="text-4xl font-bold text-blue-800">Jurusan</h1>
-        <div>
-          <h1>Sistem, Informatika, Jaringan, & Aplikasi</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus, ipsa hic quaerat assumenda dolores consequuntur laudantium fugit ab consequatur!</p>
+        <h1 className=" text-6xl font-black text-blue-800 text-center uppercase mb-8">
+          "Sistem, Informatika, Jaringan, & Aplikasi" - SIJA -
+        </h1>
+        
+        <div className="grid lg:flex between items-center justify-between ">
+          <div className="flex flex-col w-1/2 me-12">
+
+          <p className="text-justify text-2xl text-gray-400 mb-4">
+            Merupakan gabungan dari jurusan Teknik Komputer & Jaringan (TKJ) dan
+            Rekayasa Perangkat Lunak (RPL) yang dilengkapi dengan teknologi
+            terbaru: cloud computing.
+            
+          </p>
+            <p className="text-justify text-2xl text-gray-400 "> 
+            Kompetensi Keahlian:
+            <br />  
+            CLOUD COMPUTING (IaaS, PaaS, SaaS) - SISTEM INTERNET OF THINGS
+            SISTEM KEAMANAN JARINGAN PRODUK KREATIF DAN KEWIRAUSAHAAN
+            </p>
+          </div>
+          <div className="flex gap-4">
+          <Card
+  isFooterBlurred
+  radius="lg"
+  className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
+>
+  <Image
+    alt="Woman listening to music"
+    className="object-cover filter transition hover:duration-700 ease-in-out grayscale group-hover:grayscale-0" 
+    // Tambahkan filter grayscale dan hilangkan saat hover
+    height={400}
+    src="/img/Mufiz.jpg"
+    width={400}
+  />
+</Card>
+<Card
+  isFooterBlurred
+  radius="lg"
+  className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
+>
+  <Image
+    alt="Woman listening to music"
+    className="object-cover filter transition duration-700 ease-in-out grayscale group-hover:grayscale-0" 
+    // Tambahkan filter grayscale dan hilangkan saat hover
+    height={400}
+    src="./pak_dahlan.avif"
+    width={400}
+  />
+</Card>
+
+            
+          </div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 max-w-7xl mb-[75px]">
         <h1 className="text-4xl font-bold text-blue-800">Proyek Siswa</h1>
-        <CardProject /> 
+        <CardProject />
       </div>
-
-
-
 
       <Footer />
     </section>
