@@ -17,7 +17,7 @@ export default function App() {
   return (
     <BlurFade>
 
-    <div className="w-full flex flex-col mt-[75px]">
+    <div className="w-full flex flex-col ">
       {/* Bagian H1 dan Tabs */}
       <div className="md:flex items-center justify-between ">
         <h1 className="text-4xl text-blue-800 mb-8 font-bold">Fasilitas </h1> {/* Sejajarkan dengan Tabs */}

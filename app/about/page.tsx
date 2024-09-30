@@ -48,12 +48,12 @@ export default function DocsPage() {
           heading={<>Profil Sekolah</>}
         />
 
-        <div className="container mx-auto my-auto px-4 max-w-6xl py-10 ">
+        <div className="container mx-auto px-4 max-w-5xl py-10 ">
           <>
             <BlurFade delay={0.25} inView>
               <Description
                 description={
-                  <div className="text-lg text-gray-500 text-justify mb-8">
+                  <div className="text-xl text-gray-500 text-justify mb-8">
                     <p>
                       Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                       BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -122,13 +122,13 @@ export default function DocsPage() {
 
         
 
-          <App />
           
 
 
         </div>
         {/* <CarouselAsrama slides={slidesData} /> */}
-        <div className="lg:px-10 max-w-7xl">
+        <div className="lg:px-10 max-w-6xl">
+          <App />
           <h1 className="px-10 text-4xl font-bold text-blue-800 mr-5" >Makna logo</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
             <img src="https://smktibazma.sch.id/static/media/main-logo-2.7b74690f86ab4e9a4743.png" className=" h-auto" alt="logo" />

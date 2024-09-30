@@ -15,6 +15,7 @@ import {
 } from "@nextui-org/react";
 import BlurFade from "./magicui/blur-fade";
 import { IconBrandInstagram, IconBrandWhatsapp, IconBrandYoutube, IconMail } from "@tabler/icons-react";
+import { title } from "process";
 
 const truncateText = (text: string, maxLength: number): string => {
   if (text.length > maxLength) {
@@ -67,7 +68,7 @@ export default function CardProject() {
               <h4 className="text-black font-medium text-2xl">Acme camera</h4>
             </CardHeader>
             <Image
-              removeWrapper
+              
               alt="Card example background"
               className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
               src="https://nextui.org/images/card-example-6.jpeg"
@@ -145,6 +146,79 @@ export function Contact() {
       ))}
     </div>
   );
+}
+
+interface CardPpdbProps {
+  icons: ReactNode;
+  title: string;
+  desc: string;
+}
+
+const CardPpdb: FC<CardPpdbProps> = ({ icons, title, desc }) => {
+  return (
+    <Card className="p-4 border shadow-sm">
+      <CardHeader className="flex items-start gap-3">
+        <div className="text-blue-600">{icons}</div>
+        
+      </CardHeader>
+      <CardBody className="flex flex-col py-4">
+      <div className="flex flex-col">
+          <h3 className="font-bold text-lg text-blue-800">{title}</h3>
+          <p className="text-sm text-gray-600">{desc}</p>
+        </div>
+      </CardBody>
+    </Card>
+  )
+}
+
+export function Ppdb() {
+  const ppdb = [
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+    {
+      icons: <IconBrandInstagram />,
+      title: "Instagram",
+      desc: "Telusuri Media Sosial SMK TI BAZMA",
+    },
+  ]
+
+  return (
+    <div className="grid gap-6 sm:grid-rows-2 lg:grid-rows-2">
+      {
+        ppdb.map((ppdbd, index)=> (
+          <CardPpdb
+          key={index}
+          icons={ppdbd.icons}
+          title={ppdbd.title}
+          desc={ppdbd.desc}
+          />
+        ))
+      }
+    </div>
+  )
 }
 
 export function CardTest() {

@@ -15,7 +15,7 @@ export default function Donasi() {
         }
         heading={<>Kemitraan</>}
       />
-      <div className="container mx-auto my-auto px-4 max-w-7xl mt-10">
+      <div className="container mx-auto my-auto px-4 max-w-5xl mt-10">
         <h1 className="text-4xl font-bold text-blue-800">Daftar Mitra</h1>
         <Description 
           description={
