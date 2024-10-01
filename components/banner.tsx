@@ -1,4 +1,9 @@
-export default function Banner({ imgSrc, heading }) {
+type BannerProps = {
+  imgSrc: string;
+  heading: string;
+};
+
+export default function Banner({ imgSrc, heading }: BannerProps) {
   return (
     <div className='relative w-full h-[768px]'>
       <div className='absolute inset-0'>

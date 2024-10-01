@@ -25,7 +25,7 @@ export default function DocsPage() {
           imgSrc={
             "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
           }
-          heading={<>Profil Sekolah</>}
+          heading='Profil Sekolah'
         />
 
         <div className="container mx-auto px-4 max-w-5xl py-10 ">
@@ -99,15 +99,13 @@ export default function DocsPage() {
               </BlurFade>
             </div>
           </div>
-
-
-
-
-
-
         </div>
         <div className="container mx-auto px-4 max-w-5xl py-2 ">
           <App />
+
+          <BlurFade delay={0.25 * 3} inView>
+            <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-4 mb-4">Program</h1>
+          </BlurFade>
           <BlurFade delay={0.25 * 3} inView>
             <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-4 mb-4">Makna logo</h1>
           </BlurFade>

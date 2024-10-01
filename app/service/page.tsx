@@ -1,17 +1,15 @@
 "use client";
 import Banner from "@/components/banner";
-import { CardContact, Contact } from "@/components/card";
+import { Contact } from "@/components/card";
 import Footer from "@/components/footer";
-import { title } from "@/components/primitives";
 
-import App from "@/components/tabs-logo";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
 
 export default function ServicePage() {
   return (
     <div className="flex flex-col justify-center items-start">
-      <Banner heading="Saran & Masukan" />
+      <Banner heading="Saran & Masukan" imgSrc=''/>
 
       <div className="py-8 lg:py-16 flex flex-col gap-4 px-4 mx-auto max-w-6xl">
         <div style={{ width: '100%' }}>

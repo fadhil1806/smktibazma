@@ -12,7 +12,7 @@ export default function Layanan() {
                 imgSrc={
                     "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
                 }
-                heading={<>Kemitraan</>}
+                heading='Kemitraan'
             />
         </section>
     )

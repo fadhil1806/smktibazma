@@ -17,7 +17,7 @@ export default function Donasi() {
         imgSrc={
           "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
         }
-        heading={<>Donasi</>}
+        heading='Donasi'
       />
       <div className="container mx-auto my-auto max-w-5xl mt-10">
         <Description

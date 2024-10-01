@@ -32,6 +32,7 @@ const list = [
     logo: MANDIRI_LOGO_URL,
     title: "711.88.444.29",
     subtitle: "LAZNAS BAITUZZAKAH P.",
+    text: "",
   },
 ];
 
@@ -59,6 +60,10 @@ const ListCard = ({ logo, title, subtitle, text }: { logo: string; title: string
   </Card>
 );
 
+type ListMarqueeProps = {
+  description: any
+}
+
 export function ListMarquee() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
@@ -75,3 +80,4 @@ export function ListMarquee() {
     </div>
   );
 }
+

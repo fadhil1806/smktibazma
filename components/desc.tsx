@@ -1,6 +1,8 @@
 import BlurFade from './magicui/blur-fade';
-
-export default function Description({description}) {
+type DescriptionProps = {
+    description: any
+}
+export default function Description({description} : DescriptionProps) {
     return (
         <desc>
             <BlurFade delay={0.25 * 2} inView>

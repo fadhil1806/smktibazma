@@ -1,7 +1,5 @@
 import React from 'react';
 import { Tabs, Tab } from "@nextui-org/react";
-import CarouselAsrama from './carousel-asrama';
-import Banner from './banner';
 
 
 interface TabItem {
@@ -40,7 +38,6 @@ const FacilityTabs: React.FC = () => {
       >
         {tabs.map((item) => (
           <Tab key={item.id} title={item.label}>
-            <CarouselAsrama />
           </Tab>
         ))}
       </Tabs>

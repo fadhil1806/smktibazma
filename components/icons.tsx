@@ -36,7 +36,15 @@ export const Logo: React.FC<{ size?: number }> = ({ size = 36 }) => (
   />
 );
 
-export const ChevronDown = ({fill, size, height, width, ...props}) => {
+type ChevronDownProps = {
+  fill?: string;
+  size?: number;
+  height?: number;
+  width?: number;
+  [key: string]: any; // Allow for additional props
+};
+
+export const ChevronDown = ({ fill = "currentColor", size, height, width, ...props }: ChevronDownProps) => {
   return (
     <svg
       fill="none"
@@ -57,6 +65,7 @@ export const ChevronDown = ({fill, size, height, width, ...props}) => {
     </svg>
   );
 };
+
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,

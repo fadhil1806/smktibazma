@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Marquee from "@/components/magicui/marquee";
 import BlurFade from "./magicui/blur-fade";
 import { Card } from "@nextui-org/react";
+import { text } from "stream/consumers";
 
 // Simpan URL logo yang sama dalam variabel terpisah
 const BSI_LOGO_URL =
@@ -32,6 +33,7 @@ const list = [
     logo: MANDIRI_LOGO_URL,
     title: "119.000.301.1028",
     subtitle: "LAZNAS BAITUZZAKAH",
+    text: ''
   },
 ];
 

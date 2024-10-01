@@ -32,7 +32,7 @@ const items = [
 export default function Widget2 () {
   const [activeBlock, setActiveBlock] = useState(0);
 
-  const toggleMenuBlock = (index) => setActiveBlock(index);
+  const toggleMenuBlock = (index: any) => setActiveBlock(index);
 
   return (
     <section className="page widget-2-page">

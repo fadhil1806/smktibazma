@@ -20,7 +20,7 @@ export default function DocsPage() {
           imgSrc={
             "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
           }
-          heading={<>Profil Sekolah</>}
+          heading='Profil Sekolah'
         />
 
         <div className="container mx-auto my-auto px-4 max-w-6xl py-10 ">

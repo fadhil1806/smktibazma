@@ -13,7 +13,7 @@ export default function Donasi() {
         imgSrc={
           "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
         }
-        heading={<>Kemitraan</>}
+        heading={'Kemitraan'}
       />
       <div className="container mx-auto my-auto px-4 max-w-5xl mt-10">
         <h1 className="text-4xl font-bold text-blue-800">Daftar Mitra</h1>

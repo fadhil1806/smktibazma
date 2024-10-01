@@ -10,37 +10,30 @@ import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 export default function Home() {
   const slidesData = [
     {
-      imgSrc:
-        "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg",
+      img: "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg",
       heading: "Energi Masa Depan Indonesia",
+      desc: "Menggambarkan energi masa depan yang bersih dan terbarukan.",
     },
     {
-      imgSrc: "/img/silat.JPG",
+      img: "/img/silat.JPG",
       heading: "Keindahan Alam",
+      desc: "Keindahan alam Indonesia yang memukau.",
     },
     {
-      imgSrc: "https://swiperjs.com/demos/images/nature-3.jpg",
+      img: "https://swiperjs.com/demos/images/nature-3.jpg",
       heading: "Petualangan",
+      desc: "Pengalaman petualangan yang penuh tantangan.",
     },
     {
-      imgSrc: "https://swiperjs.com/demos/images/nature-4.jpg",
+      img: "https://swiperjs.com/demos/images/nature-4.jpg",
       heading: "Keajaiban Dunia",
+      desc: "Menampilkan keajaiban dunia yang menakjubkan.",
     },
   ];
-
+  
   return (
     <section className="flex flex-col items-center justify-center gap-4 ">
       <Carousel slides={slidesData} />
-      {/* <Banner
-        imgSrc={
-          "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
-        }
-        heading={
-          <>
-            ENERGI MASA <br /> DEPAN INDONESIA.
-          </>
-        }
-      /> */}
       <BlurFade delay={0.25 * 2} inView>
         <div className="container mx-auto my-[75px] px-4 max-w-6xl ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
