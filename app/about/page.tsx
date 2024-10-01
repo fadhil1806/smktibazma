@@ -23,7 +23,7 @@ export default function DocsPage() {
       <section className="flex flex-col items-center justify-center gap-4">
         <Banner
           imgSrc={
-            "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
+            "https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg"
           }
           heading='Profil Sekolah'
         />
@@ -100,7 +100,8 @@ export default function DocsPage() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-4 max-w-5xl py-2 ">
+        {/* <CarouselAsrama slides={slidesData} /> */}
+        <div className="container mx-auto px-4 max-w-5xl my-0  ">
           <App />
 
           <BlurFade delay={0.25 * 3} inView>

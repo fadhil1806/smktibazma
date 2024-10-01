@@ -10,7 +10,8 @@ import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 export default function Home() {
   const slidesData = [
     {
-      img: "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg",
+      imgSrc:
+        "/img/Banner1.JPG",
       heading: "Energi Masa Depan Indonesia",
       desc: "Menggambarkan energi masa depan yang bersih dan terbarukan.",
     },
@@ -18,16 +19,6 @@ export default function Home() {
       img: "/img/silat.JPG",
       heading: "Keindahan Alam",
       desc: "Keindahan alam Indonesia yang memukau.",
-    },
-    {
-      img: "https://swiperjs.com/demos/images/nature-3.jpg",
-      heading: "Petualangan",
-      desc: "Pengalaman petualangan yang penuh tantangan.",
-    },
-    {
-      img: "https://swiperjs.com/demos/images/nature-4.jpg",
-      heading: "Keajaiban Dunia",
-      desc: "Menampilkan keajaiban dunia yang menakjubkan.",
     },
   ];
   
@@ -172,15 +163,15 @@ export default function Home() {
       </section>
 
       <div className="container mx-auto max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
+        <h1 className="text-4xl font-bold text-blue-800 mb-8">Mengapa SMK TI BAZMA?</h1>
         <div className="grid lg:flex items-center">
 
         <Ppdb />
         </div>
       </div>
       <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
-        <CardProject />
+        {/* <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
+        <CardProject /> */}
       </div>
       <Footer />
     </section>

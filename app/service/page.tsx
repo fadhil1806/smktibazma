@@ -9,7 +9,7 @@ import { Input, Textarea } from "@nextui-org/input";
 export default function ServicePage() {
   return (
     <div className="flex flex-col justify-center items-start">
-      <Banner heading="Saran & Masukan" imgSrc=''/>
+      <Banner imgSrc="https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg" heading="Saran & Masukan" />
 
       <div className="py-8 lg:py-16 flex flex-col gap-4 px-4 mx-auto max-w-6xl">
         <div style={{ width: '100%' }}>
