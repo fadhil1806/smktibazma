@@ -18,7 +18,7 @@ export default function DocsPage() {
       <section className="flex flex-col items-center justify-center gap-4">
         <Banner
           imgSrc={
-            "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg"
+            "https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg"
           }
           heading='Profil Sekolah'
         />
@@ -28,7 +28,7 @@ export default function DocsPage() {
             <BlurFade delay={0.25} inView>
               <Description
                 description={
-                  <div className="text-lg text-gray-500 text-justify mb-6">
+                  <div className="text-lg text-gray-500 md:text-justify mb-6">
                     <p>
                       Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                       BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -57,7 +57,7 @@ export default function DocsPage() {
               <BlurFade delay={0.25 * 2} inView>
                 <h1 className=" text-4xl font-bold text-blue-800 mb-4">Visi</h1>
                 <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
-                  <h1 className="text-xl lg:text-3xl font-bold text-white">
+                  <h1 className="text-lg lg:text-3xl font-bold text-white">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
                     berkepribadian Islami, mandiri, berprestasi dan menebar
                     manfaat.

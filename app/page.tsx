@@ -6,6 +6,7 @@ import { Card, CardFooter, Divider, Image } from "@nextui-org/react";
 import BlurFade from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel";
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
+import Timeline from "@/components/stepper";
 
 export default function Home() {
   const slidesData = [
@@ -43,7 +44,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="max-w-[600px] text-lg text-gray-500 text-justify">
+            <div className="max-w-[600px] text-lg text-gray-500  md:text-justify">
               <p>
                 Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                 BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -66,8 +67,8 @@ export default function Home() {
       </BlurFade>
 
       <section
-        className="w-full text-white py-[75px] my-[75px]"
-        style={{ backgroundColor: "#0057B8" }}
+        className="w-full text-white py-[75px] bg-blue-800 my-[75px]"
+        
       >
         <div className="container mx-auto px-4 max-w-6xl ">
           <BlurFade delay={0.25 * 2} inView>
@@ -76,7 +77,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold mb-2 mt-2 text-center lg:text-start">
                   Sambutan Kepala Sekolah
                 </h1>
-                <p className="mt-2 font-regular text-lg  text-justify">
+                <p className="mt-2 font-regular text-xl text-center md:text-start ">
                   Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                   BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
                   bagi anak-anak tidak mampu. Pembangunan sekolah, baik
@@ -111,20 +112,20 @@ export default function Home() {
         <hr className="border-b-large border-b-white mt-[50px]" />
       </section>
 
-      <section className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-3xl lg:text-6xl font-black text-blue-800 text-center uppercase mb-8">
+      <section className="container mx-auto px-4 max-w-6xl my-[50px]">
+        <h1 className="text-3xl lg:text-6xl font-black text-blue-800 text-center uppercase mb-12">
           "Sistem, Informatika, Jaringan, & Aplikasi" - SIJA -
         </h1>
 
         <div className="grid md:flex between items-center justify-between ">
-          <div className="flex flex-col lg:w-1/2 me-12">
-            <p className="text-justify text-xl lg:text-2xl text-gray-500 mb-4">
+          <div className="w-full flex flex-col lg:w-1/2 me-12 mb-12">
+            <p className="text-justify text-xl leading-9  text-gray-500 mb-4">
               Merupakan gabungan dari jurusan Teknik Komputer & Jaringan (TKJ) dan
               Rekayasa Perangkat Lunak (RPL) yang dilengkapi dengan teknologi
               terbaru: cloud computing.
 
             </p>
-            <p className="text-justify text-xl lg:text-2xl text-gray-500 ">
+            <p className="text-justify text-xl leading-9  text-gray-500 ">
               Kompetensi Keahlian:
               <br />
               CLOUD COMPUTING (IaaS, PaaS, SaaS) - SISTEM INTERNET OF THINGS
@@ -142,9 +143,9 @@ export default function Home() {
                 alt="Woman listening to music"
                 className="object-cover filter transition hover:duration-700 ease-in-out grayscale group-hover:grayscale-0"
                 // Tambahkan filter grayscale dan hilangkan saat hover
-                height={400}
+                height={350}
                 src="/img/Mufiz.jpg"
-                width={400}
+                width={200}
               />
             </Card>
             <Card
@@ -156,9 +157,9 @@ export default function Home() {
                 alt="Woman listening to music"
                 className="object-cover filter transition duration-700 ease-in-out grayscale group-hover:grayscale-0"
                 // Tambahkan filter grayscale dan hilangkan saat hover
-                height={400}
-                src="./pak_dahlan.avif"
-                width={400}
+                height={350}
+                src="/img/rakit.JPG"
+                width={250}
               />
             </Card>
           </div>
@@ -172,10 +173,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
+      {/* <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
         <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
-        <CardProject />
-      </div>
+        <Timeline/>
+      </div> */}
       <Footer />
     </section>
   );

@@ -11,8 +11,8 @@ import {
 export default function Footer() {
   return (
     <footer
-      className="w-full text-white py-12"
-      style={{ backgroundColor: "#0057B8" }}
+      className="w-full text-white py-12 bg-blue-800"
+      
     >
       <BlurFade delay={0.25 * 2} inView>
         <div className="container mx-auto px-4 max-w-7xl">
