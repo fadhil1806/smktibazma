@@ -10,27 +10,21 @@ import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 export default function Home() {
   const slidesData = [
     {
-      img: "https://smktibazma.sch.id/static/media/hero-1.2803f83852406277b6cd.jpg",
+      img: "img/Angkatan.JPG",
       heading: "Energi Masa Depan Indonesia",
-      desc: "Menggambarkan energi masa depan yang bersih dan terbarukan.",
+
+      desc: 'Selamat datang di SMK TI BAZMA, pusat pendidikan yang berfokus pada pengembangan keterampilan teknologi informasi yang unggul dan berdaya saing. Kami berkomitmen untuk menciptakan generasi yang siap menghadapi tantangan dunia digital melalui pendidikan berkualitas, fasilitas lengkap, dan kurikulum berbasis teknologi terkini.'
+
     },
     {
       img: "/img/silat.JPG",
-      heading: "Keindahan Alam",
-      desc: "Keindahan alam Indonesia yang memukau.",
+      heading: "Ekstrakurikuler Pencak Silat",
+      desc: 'Selamat datang di SMK TI BAZMA, pusat pendidikan yang berfokus pada pengembangan keterampilan teknologi informasi yang unggul dan berdaya saing. Kami berkomitmen untuk menciptakan generasi yang siap menghadapi tantangan dunia digital melalui pendidikan berkualitas, fasilitas lengkap, dan kurikulum berbasis teknologi terkini.'
     },
-    {
-      img: "https://swiperjs.com/demos/images/nature-3.jpg",
-      heading: "Petualangan",
-      desc: "Pengalaman petualangan yang penuh tantangan.",
-    },
-    {
-      img: "https://swiperjs.com/demos/images/nature-4.jpg",
-      heading: "Keajaiban Dunia",
-      desc: "Menampilkan keajaiban dunia yang menakjubkan.",
-    },
+
+
   ];
-  
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 ">
       <Carousel slides={slidesData} />
@@ -96,20 +90,20 @@ export default function Home() {
               </div>
               <NeonGradientCard className="border-none max-w-[275px] object-fit">
 
-              <Card
-                isFooterBlurred
-                radius="lg"
-                className="p-0"
-              >
-                <Image
-                  isBlurred
-                  alt="Woman listing to music"
-                  className="object-cover w-full"
-                  height={340}
-                  src="./pak_dahlan.avif"
-                  width={275}
-                />
-              </Card>
+                <Card
+                  isFooterBlurred
+                  radius="lg"
+                  className="p-0"
+                >
+                  <Image
+                    isBlurred
+                    alt="Woman listing to music"
+                    className="object-cover w-full"
+                    height={340}
+                    src="./pak_dahlan.avif"
+                    width={275}
+                  />
+                </Card>
               </NeonGradientCard>
             </div>
           </BlurFade>
@@ -171,13 +165,13 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container mx-auto max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
+      <div className="container mx-auto max-w-6xl mb-[75px] mt-8">
+        <h1 className="text-4xl font-bold text-blue-800 mb-8">Mengapa Sekolah di SMK TI BAZMA?</h1>
         <div className="grid lg:flex items-center">
-
-        <Ppdb />
+          <Ppdb />
         </div>
       </div>
+
       <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
         <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
         <CardProject />

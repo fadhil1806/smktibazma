@@ -22,8 +22,8 @@ const CarouselAsrama: React.FC = () => {
     },
     {
       categories: "Asrama",
-      title: "Lemari",
-      img: "/fasilitas/asrama/cupboard.avif",
+      title: "Kamar Mandi",
+      img: "/fasilitas/asrama/kamar-mandi.avif",
     },
     {
       categories: "Asrama",

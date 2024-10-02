@@ -2,20 +2,14 @@ import React from "react";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { IconSchool, IconBuilding } from "@tabler/icons-react";
 import { CarouselAsrama, CarouselSekolah } from './carousel-asrama';
-import Carousel from "./carousel";
-import Home from "@/app/page";
-import Image from "next/image";
 import BlurFade from "./magicui/blur-fade";
-
-
 
 export default function App() {
   const [selected, setSelected] = React.useState("sekolah");
 
   return (
     <BlurFade>
-
-      <div className="w-full flex flex-col mt-[75px]">
+      <div className="w-full flex flex-col">
         <div className="md:flex items-center justify-between ">
           <BlurFade delay={0.25 * 2} inView>
             <h1 className="text-4xl text-blue-800 mb-8 font-bold">Fasilitas </h1>

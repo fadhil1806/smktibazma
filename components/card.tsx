@@ -82,24 +82,24 @@ export default function CardProject() {
       >
         {list.map((item, index) => (
           <SwiperSlide key={index}>
-                      <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
-            <CardHeader className="absolute z-10 top-1 flex-col items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">{item.Category}</p>
-              <h4 className="text-white font-bold text-2xl">{item.title}</h4>
-            </CardHeader>
-            <Image
-              removeWrapper
-              alt="Card example background"
-              className="z-0 w-full h-full object-cover"
-              src={item.img}
-            />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              
-              <Button className="text-tiny" color="primary" radius="full" size="sm">
-                Get in touch
-              </Button>
-            </CardFooter>
-          </Card>
+            <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
+              <CardHeader className="absolute z-10 top-1 flex-col items-start">
+                <p className="text-tiny text-white/60 uppercase font-bold">{item.Category}</p>
+                <h4 className="text-white font-bold text-2xl">{item.title}</h4>
+              </CardHeader>
+              <Image
+                removeWrapper
+                alt="Card example background"
+                className="z-0 w-full h-full object-cover"
+                src={item.img}
+              />
+              <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+
+                <Button className="text-tiny" color="primary" radius="full" size="sm">
+                  Get in touch
+                </Button>
+              </CardFooter>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -249,12 +249,12 @@ const CardPpdb: FC<CardPpdbProps> = ({ icons, title, desc }) => {
           <h1 className="text-lg font-bold">{title}</h1>
         </div>
       </CardHeader>
-      
+
       <CardBody>
         {desc}
       </CardBody>
-      
-      
+
+
     </Card>
   )
 }
@@ -283,7 +283,7 @@ export function Ppdb() {
     },
     {
       icons: <IconHeartHandshake />,
-      title: "Peluang Magand",
+      title: "Peluang Magang",
       desc: "SMK TI BAZMA menjalin kemitraan dengan BUMN, menyediakan peluang magang dengan pencapaian kompetensi profesional yang unggul.",
     },
     {
@@ -294,17 +294,15 @@ export function Ppdb() {
   ]
 
   return (
-    <div className="grid gap-6 md:grid-cols-3 justify-center items-center">
-      {
-        ppdb.map((ppdbd, index)=> (
-          <CardPpdb
+    <div className="grid gap-6 md:grid-cols-3 justify-center items-stretch">
+      {ppdb.map((ppdbd, index) => (
+        <CardPpdb
           key={index}
           icons={ppdbd.icons}
           title={ppdbd.title}
           desc={ppdbd.desc}
-          />
-        ))
-      }
+        />
+      ))}
     </div>
   )
 }

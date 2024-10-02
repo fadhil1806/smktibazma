@@ -2,12 +2,7 @@
 import Banner from "@/components/banner";
 import Description from "@/components/desc";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
-import { IconBuilding, IconSchool } from "@tabler/icons-react";
-
-import { title } from "@/components/primitives";
 import Footer from "@/components/footer";
-import CardProject from "@/components/card-project";
 import App from "@/components/sa";
 import BlurFade from "@/components/magicui/blur-fade";
 import FacilityTabs from "@/components/facility";
@@ -28,12 +23,12 @@ export default function DocsPage() {
           heading='Profil Sekolah'
         />
 
-        <div className="container mx-auto px-4 max-w-5xl py-10 ">
+        <div className="container mx-auto  max-w-5xl py-8 ">
           <>
             <BlurFade delay={0.25} inView>
               <Description
                 description={
-                  <div className="text-xl text-gray-500 text-justify mb-8">
+                  <div className="text-lg text-gray-500 text-justify mb-6">
                     <p>
                       Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
                       BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
@@ -100,14 +95,11 @@ export default function DocsPage() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-4 max-w-5xl py-2 ">
-          <App />
 
+        <div className="container mx-auto px-4 max-w-5xl">
+          <App />
           <BlurFade delay={0.25 * 3} inView>
-            <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-4 mb-4">Program</h1>
-          </BlurFade>
-          <BlurFade delay={0.25 * 3} inView>
-            <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-4 mb-4">Makna logo</h1>
+            <h1 className=" text-4xl font-bold text-blue-800 mr-5 mt-8 mb-4">Makna logo</h1>
           </BlurFade>
           <BlurFade delay={0.25 * 4} inView>
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
