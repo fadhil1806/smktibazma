@@ -29,6 +29,8 @@ import {
 import { Button } from "@nextui-org/button";
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
 import { IconSchool, IconUsers, IconHeadset, IconClipboardData, IconId } from "@tabler/icons-react";
+import React from "react";
+import { subtitle } from "./primitives";
 const icons = {
   chevron: <ChevronDown fill="currentColor" size={16} />,
   profile: <IconSchool className="text-primary" stroke={2} size={30} />,
@@ -38,6 +40,8 @@ const icons = {
   saas: <IconId className="text-primary" stroke={2} size={30} />,
 }
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -65,11 +69,10 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit text-xl">SMK TI BAZMA</p>
+            <p className={subtitle({class: 'text-bold text-xl'})}>SMK TI BAZMA</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full items-center"
         justify="end"
@@ -87,7 +90,7 @@ export const Navbar = () => {
                 >
                   <h1 className="font-semibold">
 
-                  Tentang Kami
+                    Tentang Kami
                   </h1>
                 </Button>
               </DropdownTrigger>
@@ -125,7 +128,7 @@ export const Navbar = () => {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Dropdown>
+          {/* <Dropdown>
             <NavbarItem>
               <DropdownTrigger>
                 <Button
@@ -167,7 +170,7 @@ export const Navbar = () => {
                 SAAS
               </DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -225,17 +228,17 @@ export const Navbar = () => {
         </NavbarItem> */}
       </NavbarContent>
 
-      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu >
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-        <Dropdown>
+          <Dropdown>
             <NavbarItem>
               <DropdownTrigger>
                 <Button
@@ -247,7 +250,7 @@ export const Navbar = () => {
                 >
                   <h1 className="font-semibold">
 
-                  Tentang Kami
+                    Tentang Kami
                   </h1>
                 </Button>
               </DropdownTrigger>

@@ -45,4 +45,53 @@ const FacilityTabs: React.FC = () => {
   );
 };
 
+
+const InfoCard = () => {
+  const items = [
+    {
+      title: 'Green Building',
+      description: 'Elemen hijau pada bangunan sebagai barrier cahaya dan panas matahari',
+      icon: '🌱',
+    },
+    {
+      title: 'Blue Area',
+      description: 'Tempat budidaya ikan dan sebagai penyejuk alami',
+      icon: '💧',
+    },
+    {
+      title: 'Green Area',
+      description: 'Ruang terbuka hijau sebagai penyeimbang iklim mikro kawasan',
+      icon: '🌿',
+    },
+    {
+      title: 'Passive & Active Energy',
+      description: 'Orientasi bangunan utara-selatan, cross ventilation & rainwater harvesting.',
+      icon: '💡',
+    },
+    {
+      title: 'Foresteric & Farming',
+      description: 'Budidaya hidroponik dan pengolahan limbah menjadi organik',
+      icon: '🌾',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
+        >
+          <div className="text-4xl mb-4">{item.icon}</div>
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">{item.title}</h3>
+          <p className="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default FacilityTabs;
+export { InfoCard };
+
+

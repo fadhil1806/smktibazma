@@ -82,7 +82,7 @@ export default function CardProject() {
       >
         {list.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
+            {/* <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
               <CardHeader className="absolute z-10 top-1 flex-col items-start">
                 <p className="text-tiny text-white/60 uppercase font-bold">{item.Category}</p>
                 <h4 className="text-white font-bold text-2xl">{item.title}</h4>
@@ -92,6 +92,24 @@ export default function CardProject() {
                 alt="Card example background"
                 className="z-0 w-full h-full object-cover"
                 src={item.img}
+              />
+              <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+
+                <Button className="text-tiny" color="primary" radius="full" size="sm">
+                  Get in touch
+                </Button>
+              </CardFooter>
+            </Card> */}
+            <Card className="w-full col-span-12 sm:col-span-4 h-[300px]">
+              <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+                <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
+                <h4 className="text-white font-medium text-large">{item.title}</h4>
+              </CardHeader>
+              <Image
+                removeWrapper
+                alt="Card background"
+                className="z-0 w-full h-full object-cover"
+                src="https://nextui.org/images/card-example-4.jpeg"
               />
               <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
 

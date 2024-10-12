@@ -17,7 +17,7 @@ export default function KompotensiKeahlian() {
           </h1>
         }
       >
-        <p className="text-lg text-gray-500">
+        <p className="text-lg text-gray-500 text-justify">
           Pembelajaran Jurusan SIJA di SMK TI BAZMA berlangsung selama 4 tahun,
           dengan model pembelajaran 3 tahun di sekolah sedangkan 1 tahun
           pembelajaran di industri dalam bentuk Praktek Kerja Industri
@@ -36,9 +36,9 @@ export default function KompotensiKeahlian() {
           </h1>
         }
       >
-        <p className="text-lg text-gray-500 capitalize">
+        <p className="text-lg text-gray-500 capitalize text-justify">
           Sistem komputer, jaringan komputer, Pemrogaman Dasar, Dasar Desain
-          Grafis , Sistem Internet of Thingsi, komputasi awan, sistem keamanan
+          Grafis , Sistem Internet of Thingsi, komputasi awan, Informatika, sistem keamanan
           jaringan, materi sinkronisasi dengan industri, serta produk kreatif
           dan kewirausahaan.
         </p>
@@ -53,7 +53,7 @@ export default function KompotensiKeahlian() {
           </h1>
         }
       >
-        <ul className="text-lg text-gray-500 capitalize list-disc">
+        <ul className="text-lg text-gray-500 capitalize list-disc ms-4">
           <li>Developer aplikasi (Programmer),</li>
           <li>IT support perangkat lunak, perangkat keras dan jaringan,</li>
           <li>Konsultan IT (Kursus dan tutorial),</li>

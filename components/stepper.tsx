@@ -1,25 +1,55 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import React from 'react';
+import { Divider, Steps } from 'antd';
 
-const steps = [
-  'Select master blaster campaign settings',
-  'Create an ad group',
-  'Create an ad',
-];
+const StepperJS: React.FC = () => (
+  <>
+    {/* <Steps
+      progressDot
+      current={1}
+      items={[
+        {
+          title: 'Finished',
+          description: 'This is a description.',
+        },
+        {
+          title: 'In Progress',
+          description: 'This is a description.',
+        },
+        {
+          title: 'Waiting',
+          description: 'This is a description.',
+        },
+      ]}
+    /> */}
+    <Divider />
+    <Steps
+      progressDot
+      current={2}
+      direction="vertical"
+      items={[
+        {
+          title: 'Registrasi',
+          description: 'Registrasi PPDB sampai tanggal 21 Desember 2024',
+        },
+        {
+          title: 'Pengumpulan Berkas',
+          description: 'Bagian ini adalah pengumpulan berkas yang dibutuhkan sekolah',
+        },
+        {
+          title: 'Seleksi Pertama',
+          description: 'Para siswa akan di seleksi untuk ke tahap selanjutnya.',
+        },
+        {
+          title: 'Seleksi Kedua',
+          description: 'Seleksi ini yang menentukan siswa akan lolos.',
+        },
+        {
+          title: 'Hasil Seleksi',
+          description: 'Semua peserta akan mendapat hasil seleksi.',
+        },
+      ]}
+    />
+  </>
+);
 
-export default function imeline() {
-  return (
-    <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={1} alternativeLabel>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-    </Box>
-  );
-}
+export default StepperJS;

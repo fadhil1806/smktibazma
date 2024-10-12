@@ -5,7 +5,7 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 import Footer from "@/components/footer";
 import App from "@/components/sa";
 import BlurFade from "@/components/magicui/blur-fade";
-import FacilityTabs from "@/components/facility";
+import FacilityTabs, { InfoCard } from "@/components/facility";
 import Carousel from "@/components/carousel";
 import CarouselAsrama from "@/components/carousel-program-asrama";
 import Widget2 from "@/components/widget";
@@ -28,23 +28,22 @@ export default function DocsPage() {
             <BlurFade delay={0.25} inView>
               <Description
                 description={
-                  <div className="text-lg text-gray-500 md:text-justify mb-6">
+                  <div className="text-lg text-gray-500 text-justify mb-6">
                     <p>
                       Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
-                      BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
-                      bagi anak-anak tidak mampu. Pembangunan sekolah, baik
-                      fasilitas maupun operasional didanai dari hasil pengelolaan
-                      wakaf dan sumber dana sosial kemanusiaan lainnya yang
-                      diamanahkan oleh masyarakat.
+                      BAZMA) merupakan sekolah unggulan berasrama yang bebas biaya dan diperuntukan untuk
+                      anak-anak tidak mampu. Pembangunan sekolah, baik fasilitas
+                      maupun operasional didanai dari hasil pengelolaan wakaf dan
+                      sumber dana sosial kemanusiaan lainnya yang diamanahkan oleh
+                      masyarakat.
                     </p>
                     <br />
                     <p>
-                      SMK TI BAZMA menyelenggarakan program pembelajaran yang
-                      ditempuh selama 4 tahun dengan siswa-siswa yang berasal dari
-                      berbagai daerah di seluruh Indonesia. SMK TI Bazma
-                      menyelenggarakan pendidikan dengan jurusan SIJA (Sistem
-                      Informatika, Jaringan & Aplikasi) dengan kombinasi kurikulum
-                      berbasis asrama.
+                      SMK TI BAZMA menyelenggarakan program pembelajaran yang ditempuh
+                      selama 4 tahun dengan siswa-siswa terbaik yang berasal dari berbagai
+                      daerah di seluruh Indonesia. SMK TI Bazma menyelenggarakan
+                      pendidikan dengan jurusan SIJA (Sistem Informatika, Jaringan &
+                      Aplikasi) dengan kombinasi kurikulum berbasis asrama.
                     </p>
                   </div>
                 }
@@ -57,7 +56,7 @@ export default function DocsPage() {
               <BlurFade delay={0.25 * 2} inView>
                 <h1 className=" text-4xl font-bold text-blue-800 mb-4">Visi</h1>
                 <div className="p-6 bg-blue-800 rounded-xl  shadow-md">
-                  <h1 className="text-lg lg:text-3xl font-bold text-white">
+                  <h1 className="text-[20px] lg:text-3xl font-bold text-white text-justify">
                     Menjadi sekolah yang melahirkan generasi berkarakter unggul,
                     berkepribadian Islami, mandiri, berprestasi dan menebar
                     manfaat.
@@ -74,7 +73,7 @@ export default function DocsPage() {
                     aria-label="Accordion 1"
                     title="Misi 1"
                   >
-                    Menyelenggarkan Sekolah Menengah Kejuruan (SMK) yang berkualitas
+                    Menyelenggarakan Sekolah Menengah Kejuruan (SMK) yang berkualitas
                   </AccordionItem>
                   <AccordionItem
                     key="2"
@@ -107,6 +106,7 @@ export default function DocsPage() {
               <TabsLogo />
             </div>
           </BlurFade>
+
         </div>
 
         <div className="container mx-auto my-auto px-4 max-w-6xl py-10">

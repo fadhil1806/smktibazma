@@ -3,6 +3,7 @@ import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { IconSchool, IconBuilding } from "@tabler/icons-react";
 import { CarouselAsrama, CarouselSekolah } from './carousel-asrama';
 import BlurFade from "./magicui/blur-fade";
+import { InfoCard } from "./facility";
 
 export default function App() {
   const [selected, setSelected] = React.useState("sekolah");
@@ -45,7 +46,7 @@ export default function App() {
             {selected === "sekolah" && (
               <div className="flex flex-col justify-center items-center gap-4">
                 <CarouselSekolah />
-                <img src="https://smktibazma.sch.id/static/media/fasilitas.dfa5a4a4e6c65236542d.png" alt="img" />
+                <InfoCard/>
               </div>
             )}
             {selected === "asrama" && (

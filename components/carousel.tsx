@@ -96,7 +96,7 @@ export default function Carousel({ slides }: CarouselProps) {
                     clickable: true,
                 }}
                 autoplay={{
-                    delay: 2500,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay, EffectFade, Navigation, Pagination]}
@@ -119,7 +119,7 @@ export default function Carousel({ slides }: CarouselProps) {
                                 <div className='text-white w-full flex flex-col md:flex-row mx-auto my-auto px-4 max-w-7xl items-start mb-16'>
                                     <div className='w-full md:w-1/2 '>
                                         <BlurFade delay={0.25} inView>
-                                            <h1 className='text-4xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
+                                            <h1 className='text-3xl md:text-6xl font-black leading-tight md:leading-[64px] uppercase'>
                                                 {slide.heading}
                                             </h1>
                                         </BlurFade>
@@ -127,7 +127,7 @@ export default function Carousel({ slides }: CarouselProps) {
                                     <div className='w-full md:w-1/2 mt-4 md:mt-0 md:ml-6'>
                                         <BlurFade delay={0.25} inView>
 
-                                            <p className='text-lg line-clamp-4 md:line-clamp-none md:whitespace-normal '>
+                                            <p className='text-md md:text-lg line-clamp-7 text-justify md:line-clamp-none md:whitespace-normal '>
                                                 {slide.desc ?? '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
                                             </p>
                                         </BlurFade>
@@ -141,3 +141,4 @@ export default function Carousel({ slides }: CarouselProps) {
         </div >
     );
 }
+

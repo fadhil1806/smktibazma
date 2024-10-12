@@ -7,6 +7,8 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel";
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import Timeline from "@/components/stepper";
+import StepperJS from "@/components/stepper";
+import { subtitle } from "@/components/primitives";
 
 export default function Home() {
   const slidesData = [
@@ -14,13 +16,13 @@ export default function Home() {
       img: "img/Angkatan.JPG",
       heading: "Energi Masa Depan Indonesia",
 
-      desc: 'Selamat datang di SMK TI BAZMA, pusat pendidikan yang berfokus pada pengembangan keterampilan teknologi informasi yang unggul dan berdaya saing. Kami berkomitmen untuk menciptakan generasi yang siap menghadapi tantangan dunia digital melalui pendidikan berkualitas, fasilitas lengkap, dan kurikulum berbasis teknologi terkini.'
+      desc: 'Selamat datang di SMK TI BAZMA, pusat pengembangan pendidikan yang berfokus pada pengembangan keterampilan teknologi informasi yang unggul dan berdaya saing. Kami berkomitmen untuk menciptakan generasi yang siap menghadapi tantangan dunia digital melalui pendidikan berkualitas, fasilitas lengkap, dan kurikulum berbasis teknologi terkini.'
 
     },
     {
       img: "/img/silat.JPG",
       heading: "Ekstrakurikuler Pencak Silat",
-      desc: 'Selamat datang di SMK TI BAZMA, pusat pendidikan yang berfokus pada pengembangan keterampilan teknologi informasi yang unggul dan berdaya saing. Kami berkomitmen untuk menciptakan generasi yang siap menghadapi tantangan dunia digital melalui pendidikan berkualitas, fasilitas lengkap, dan kurikulum berbasis teknologi terkini.'
+      desc: 'Pencak Silat adalah seni bela diri tradisional Indonesia yang mengajarkan keterampilan bertarung, disiplin, dan nilai-nilai budaya. Siswa kami dapat mengikuti ekstrakurikuler Pencak Silat untuk mengembangkan fisik, mental, dan karakter melalui latihan yang seimbang dan bermakna.'
     },
 
 
@@ -44,19 +46,19 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="max-w-[600px] text-lg text-gray-500  md:text-justify">
-              <p>
+            <div className="max-w-[600px] text-lg text-gray-500 text-justify">
+              <p className={subtitle()}>
                 Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
-                BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
-                bagi anak-anak tidak mampu. Pembangunan sekolah, baik fasilitas
+                BAZMA) merupakan sekolah unggulan berasrama yang bebas biaya dan diperuntukan untuk
+                anak-anak tidak mampu. Pembangunan sekolah, baik fasilitas
                 maupun operasional didanai dari hasil pengelolaan wakaf dan
                 sumber dana sosial kemanusiaan lainnya yang diamanahkan oleh
                 masyarakat.
               </p>
               <br />
-              <p>
+              <p className={subtitle()}>
                 SMK TI BAZMA menyelenggarakan program pembelajaran yang ditempuh
-                selama 4 tahun dengan siswa-siswa yang berasal dari berbagai
+                selama 4 tahun dengan siswa-siswa terbaik yang berasal dari berbagai
                 daerah di seluruh Indonesia. SMK TI Bazma menyelenggarakan
                 pendidikan dengan jurusan SIJA (Sistem Informatika, Jaringan &
                 Aplikasi) dengan kombinasi kurikulum berbasis asrama.
@@ -68,7 +70,7 @@ export default function Home() {
 
       <section
         className="w-full text-white py-[75px] bg-blue-800 my-[75px]"
-        
+
       >
         <div className="container mx-auto px-4 max-w-6xl ">
           <BlurFade delay={0.25 * 2} inView>
@@ -77,13 +79,12 @@ export default function Home() {
                 <h1 className="text-4xl font-bold mb-2 mt-2 text-center lg:text-start">
                   Sambutan Kepala Sekolah
                 </h1>
-                <p className="mt-2 font-regular text-xl text-center md:text-start ">
-                  Sekolah Menengah Kejuruan Teknologi Informasi Bazma (SMK TI
-                  BAZMA) merupakan sekolah unggulan berasrama yang diperuntukkan
-                  bagi anak-anak tidak mampu. Pembangunan sekolah, baik
-                  fasilitas maupun operasional didanai dari hasil pengelolaan
-                  wakaf dan sumber dana sosial kemanusiaan lainnya yang
-                  diamanahkan oleh masyarakat.
+                <p className="mt-2 font-regular text-lg text-justify">
+                  SMK TI BAZMA merupakan sekolah yang  merepresentasikan dari sebuah realita kehidupan pendidikan era milenial sekarang ini.  Dimana perpaduan antara teknologi IT kekinian yang dilandasi dengan nilai  keagamaan serta Tahfidzul Qur'an dalam bingkai Islamic boarding school.
+                  <br /> <br />
+                  Sekolah yang memiliki masa pendidikan 4 tahun ini terlahir dari badan Filantropi kemanusiaan dengan full beasiswa untuk peserta didik dhuafa dengan pendanaan hasil Zakat, infak, shadaqoh dan wakaf dari Yayasan BAZMA.
+                  <br /><br />
+                  Semoga SMK TI BAZMA selalu Istiqomah menebar manfaat dan menjadi jawaban atas doa serta harapan bagi para energi masa depan Indonesia sehingga kedepannya bisa merubah Mustahik menjadi Muzaki sebagai generasi penerus perjuangan bangsa.
                 </p>
                 <h1 className="text-3xl font-semibold mt-3 text-center lg:text-start">
                   - Ahmad Dahlan, S.Ag.
@@ -112,71 +113,80 @@ export default function Home() {
         <hr className="border-b-large border-b-white mt-[50px]" />
       </section>
 
-      <section className="container mx-auto px-4 max-w-6xl my-[50px]">
-        <h1 className="text-3xl lg:text-6xl font-black text-blue-800 text-center uppercase mb-12">
-          "Sistem, Informatika, Jaringan, & Aplikasi" - SIJA -
+
+      <section className="container mx-auto px-4 max-w-6xl ">
+        <h1 className="text-4xl lg:text-6xl font-black text-blue-800 text-center uppercase mb-12">
+          Sistem, Informatika, Jaringan, & Aplikasi (SIJA)
         </h1>
 
-        <div className="grid md:flex between items-center justify-between ">
-          <div className="w-full flex flex-col lg:w-1/2 me-12 mb-12">
-            <p className="text-justify text-xl leading-9  text-gray-500 mb-4">
-              Merupakan gabungan dari jurusan Teknik Komputer & Jaringan (TKJ) dan
-              Rekayasa Perangkat Lunak (RPL) yang dilengkapi dengan teknologi
-              terbaru: cloud computing.
-
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Bagian Teks */}
+          <div className="space-y-6">
+            <p className={subtitle()}>
+              SIJA adalah perpaduan inovatif antara Teknik Komputer & Jaringan (TKJ) dan Rekayasa Perangkat Lunak (RPL). Kami dilengkapi dengan teknologi terbaru dalam bidang <span className="font-bold">cloud computing</span> untuk mempersiapkan siswa menghadapi tantangan masa depan.
             </p>
-            <p className="text-justify text-xl leading-9  text-gray-500 ">
-              Kompetensi Keahlian:
-              <br />
-              CLOUD COMPUTING (IaaS, PaaS, SaaS) - SISTEM INTERNET OF THINGS
-              SISTEM KEAMANAN JARINGAN PRODUK KREATIF DAN KEWIRAUSAHAAN
-            </p>
+            <div className="text-xl leading-8 text-gray-700">
+              <p className={"font-bold"}>Kompetensi Keahlian:</p>
+              <ul className="list-disc pl-6">
+                <li className="mt-2"><span className="font-bold">CLOUD COMPUTING</span> <span className="font-bold text-blue-800">(IaaS, PaaS, SaaS)</span></li>
+                <li className="mt-2"><span className="font-bold">SISTEM INTERNET OF THINGS</span> <span className="font-bold text-blue-800">(SIoT)</span></li>
+                <li className="mt-2"><span className="font-bold">SISTEM KEAMANAN JARINGAN</span> <span className="font-bold text-blue-800">(SKJ)</span></li>
+                <li className="mt-2"><span className="font-bold">PRODUK KREATIF DAN KEWIRAUSAHAAN</span> <span className="font-bold text-blue-800">(PKK)</span></li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-4">
 
-            <Card
-              isFooterBlurred
-              radius="lg"
-              className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
-            >
-              <Image
-                alt="Woman listening to music"
-                className="object-cover filter transition hover:duration-700 ease-in-out grayscale group-hover:grayscale-0"
-                // Tambahkan filter grayscale dan hilangkan saat hover
-                height={350}
+          {/* Bagian Gambar */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:justify-end">
+            {/* Card Gambar 1 */}
+            <div className="relative group w-64 h-80 bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img
                 src="/img/Mufiz.jpg"
-                width={200}
+                alt="Student Working on Computer"
+                className="w-full h-full object-cover transition-transform transform group-hover:scale-110"
               />
-            </Card>
-            <Card
-              isFooterBlurred
-              radius="lg"
-              className="border-none max-w-[275px] object-fit group" // Tambahkan class "group" untuk menangani hover pada anak elemen
-            >
-              <Image
-                alt="Woman listening to music"
-                className="object-cover filter transition duration-700 ease-in-out grayscale group-hover:grayscale-0"
-                // Tambahkan filter grayscale dan hilangkan saat hover
-                height={350}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70 group-hover:opacity-50 transition-opacity"></div>
+              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">Web Programming</div>
+            </div>
+
+            {/* Card Gambar 2 */}
+            <div className="relative group w-64 h-80 bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img
                 src="/img/rakit.JPG"
-                width={250}
+                alt="Students Building Hardware"
+                className="w-full h-full object-cover transition-transform transform group-hover:scale-110"
               />
-            </Card>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70 group-hover:opacity-50 transition-opacity"></div>
+              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">Komputer & Jaringan</div>
+            </div>
           </div>
+
+        </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-200">
+            Pelajari Lebih Lanjut
+          </button>
         </div>
       </section>
 
-      <div className="container mx-auto max-w-6xl mb-[75px] mt-8">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Mengapa Sekolah di SMK TI BAZMA?</h1>
+
+      <div className="container mx-auto max-w-6xl mb-[75px] mt-8 p-4">
+        <h1 className="text-4xl font-bold text-blue-800 mb-8 ">Mengapa Sekolah di SMK TI BAZMA?</h1>
         <div className="grid lg:flex items-center">
           <Ppdb />
         </div>
       </div>
 
-      {/* <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8">Proyek Siswa</h1>
-        <Timeline/>
-      </div> */}
+      <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
+        <h1 className="text-4xl font-bold text-blue-800 mb-4">Info PPDB</h1>
+        <StepperJS />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl mb-[75px]">
+        <h1 className="text-4xl font-bold text-blue-800 mb-4">Project siswa</h1>
+        <CardProject />
+        </div>
       <Footer />
     </section>
   );
