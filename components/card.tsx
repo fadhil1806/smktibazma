@@ -12,6 +12,7 @@ import {
   Image,
   Link,
   Skeleton,
+  Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure
 } from "@nextui-org/react";
 import BlurFade from "./magicui/blur-fade";
 import { IconBrandInstagram, IconBrandWhatsapp, IconBrandYoutube, IconMail, IconBuildings, IconHeartHandshake, IconBuildingMosque, IconVocabulary, IconSchool, IconBooks } from "@tabler/icons-react";
@@ -30,6 +31,9 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 export default function CardProject() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   const list = [
     {
       img: "/img/proyek3.png",
@@ -64,15 +68,20 @@ export default function CardProject() {
     },
   ];
 
+  const handleOpenModal = (project) => {
+    setSelectedProject(project); 
+    onOpen(); 
+  };
+
   return (
     <>
       <Swiper
-        slidesPerView={1} // Set default for mobile
+        slidesPerView={1}
         spaceBetween={30}
         breakpoints={{
-          640: { slidesPerView: 2 }, // For small screens
-          768: { slidesPerView: 3 }, // For tablets
-          1024: { slidesPerView: 4 }, // For desktops
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
         }}
         pagination={{
           clickable: true,
@@ -82,38 +91,24 @@ export default function CardProject() {
       >
         {list.map((item, index) => (
           <SwiperSlide key={index}>
-            {/* <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-white/60 uppercase font-bold">{item.Category}</p>
-                <h4 className="text-white font-bold text-2xl">{item.title}</h4>
-              </CardHeader>
-              <Image
-                removeWrapper
-                alt="Card example background"
-                className="z-0 w-full h-full object-cover"
-                src={item.img}
-              />
-              <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-
-                <Button className="text-tiny" color="primary" radius="full" size="sm">
-                  Get in touch
-                </Button>
-              </CardFooter>
-            </Card> */}
             <Card className="w-full col-span-12 sm:col-span-4 h-[300px]">
               <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
+                <p className="text-tiny text-white/60 uppercase font-bold">{item.Category || "Project"}</p>
                 <h4 className="text-white font-medium text-large">{item.title}</h4>
               </CardHeader>
               <Image
                 removeWrapper
                 alt="Card background"
                 className="z-0 w-full h-full object-cover"
-                src="https://nextui.org/images/card-example-4.jpeg"
+                src={item.img}
               />
               <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-
-                <Button className="text-tiny" color="primary" radius="full" size="sm">
+                <Button
+                  className="text-tiny text-white bg-blue-800"
+                  radius="full"
+                  size="sm"
+                  onPress={() => handleOpenModal(item)} 
+                >
                   Get in touch
                 </Button>
               </CardFooter>
@@ -121,6 +116,27 @@ export default function CardProject() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                {selectedProject?.title}
+              </ModalHeader>
+              <ModalBody>
+                <p>{selectedProject?.desc}</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </>
   );
 
@@ -268,7 +284,7 @@ const CardPpdb: FC<CardPpdbProps> = ({ icons, title, desc }) => {
         </div>
       </CardHeader>
 
-      <CardBody>
+      <CardBody className="text-justify">
         {desc}
       </CardBody>
 
@@ -312,7 +328,7 @@ export function Ppdb() {
   ]
 
   return (
-    <div className="grid gap-6 md:grid-cols-3 justify-center items-stretch">
+    <div className="grid gap-6  md:grid-cols-3 justify-center items-stretch">
       {ppdb.map((ppdbd, index) => (
         <CardPpdb
           key={index}
